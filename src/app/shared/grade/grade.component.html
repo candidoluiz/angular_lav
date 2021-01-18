@@ -1,0 +1,105 @@
+<div class="col-md-12">                        
+    <form method="POST">
+        <div id="box-seq-5" class="container-fluid" style="box-shadow: 0px 2px 6px 2px #cacaca; margin-bottom: 10px; border-radius: 5px;">                                
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="background-color:#ececec; padding:4px; border-bottom: 1px solid #e1e1e1; margin-bottom: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
+                    476.132000-000098 - SANDALIA LINE PLAY
+                    <span class="informeVendaEstoque_476132000_000098___">
+                    </span>
+                </div>
+                </div>
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 text-center">
+                <div class="row">
+                    <div class="imageResponsiveThumb">
+                        <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Samus_Aran.png/220px-Samus_Aran.png" style="max-height:93px; margin:0 auto;">            
+                    </div>
+                </div>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                    <div class="row">
+                    <div class="col-xs-1 col-sm-4 col-lg-1 col-md-2 text-right hidden-xs hidden-sm" style=" padding: 0;">
+                        <span class="fonte-titulos-grid-faturamento alinha-titulos-grade hidden-xs hidden-sm" style="margin-top: 3.3px;">Tamanho:</span>                                           
+                        <span class="fonte-titulos-grid-faturamento alinha-titulos-grade" style="margin-top: 6px;">Estoque:</span>
+                        <span class="fonte-titulos-grid-faturamento alinha-titulos-grade hidden-xs hidden-sm" style="margin-top: 8.7px;">Quantidade:</span>                                            
+                    </div>
+                    <div class=" col-xs-12 col-sm-8 col-md-7 col-lg-8 ">
+                        <div id="5" class="linha-completa-carrinho">
+                            <div class="box-pontos-grade mCustomScrollbar _mCS_2 mCS_no_scrollbar" style="width:100%;display: flex; white-space: nowrap;">
+                            <div id="mCSB_2" class="mCustomScrollBox mCS-dark-thin mCSB_horizontal mCSB_inside" style="max-height: none;">
+                                <div id="mCSB_2_container" class="mCSB_container mCS_x_hidden mCS_no_scrollbar_x" style="position: relative; top: 0px; left: 0px; width: 100%;">
+                                    <div class="box-grade" *ngFor="let item of grades">
+                                        <div class="tb-grade-area-input">
+                                        <div class="addNumberFix">
+                                            <label>{{item.grade}}</label>
+                                            <label>{{item.estoque}}</label> 
+                                            <input class="imputAddNumber" type="text" disabled="disabled" value="{{item.quantidade}}">       
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+                        <div class="row">
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="text-align: right;padding-right: 2px !important;">
+                            <span class="font_size_320px" style="font-size: 12px; margin-right:10px; display: block;">items:</span>
+                            <span class="font_size_320px" style="font-size: 12px; margin-right:10px; display: block;">Box:</span>
+                            <span class="font_size_320px" style="font-size: 12px; margin-right:10px; display: block;">Total:</span>
+                            <span class="font_size_320px display-768" style="font-size: 12px; margin-right:10px; display: block;">Vl Unit: </span>
+                            <span class="font_size_320px display-768" style="font-size: 12px; margin-right:10px; display: block;">Vl Unit liq: </span>
+                            <span class="font_size_320px display-768" style="font-size: 12px; margin-right:10px; display: block;">Vl Total liq:</span>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" style="padding-left: 2px !important;">
+                            <span class="font_size_320px" style="font-size: 12px; margin-right:10px; display: block;">12</span>
+                            <span class="font_size_320px" style="font-size: 12px; margin-right:10px; display: block;">1</span>
+                            <span class="font_size_320px" style="font-size: 12px; margin-right:10px; display: block;">12</span>
+                            <span class="font_size_320px display-768" style="font-size: 12px; margin-right:10px; display: block;"><span class="vlr_unit__476132000_000098____5" style="padding-left: 0;"> R$ 41,39</span></span>
+                            <span class="font_size_320px display-768" style="font-size: 12px; margin-right:10px; display: block;">R$ 41,39</span>
+                            <span class="font_size_320px display-768" style="font-size: 12px; margin-right:10px; display: block;">R$ 496,68</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6  col-md-6 col-lg-6 text-left hidden-768">
+                        <span class="font_size_320px" style="font-size: 12px; margin-right:10px; display: block;">
+                        Unitário: <b><span class="font_size_320px"><span class="vlr_unit__476132000_000098____5" style="padding-left: 0;"> R$ 41,39</span></span></b>
+                        </span>
+                        <span class="font_size_320px" style="font-size: 12px; margin-right:10px; display: block;">
+                        Total: <b> <span class="font_size_320px vlr_tt_bruto__476132000_000098____5">R$ 496,68</span></b>
+                        </span>
+                    </div>
+                    <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2 text-center hidden-lg hidden-md hidden-768">
+                        <label><a title="Editar" onclick="abreGradePopUp(5);" class="btn btn-sm btn-info link-edit-item" style="color:#FFF !important; margin: 4px;"><i class="fa fa-edit"></i></a></label>
+                        <label><a title="Editar" onclick="abreGradePopUp(5);" class="btn btn-sm btn-danger link-edit-item" style="color:#FFF !important; margin: 4px; width: 32px;"><i class="fa fa-trash"></i></a></label>
+                        
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 alert alert-warning" style="padding: 0 !important; margin-bottom: 0 !important;">
+                <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10" style="padding: 0;">
+                    <div class="linha-completa-carrinho" style="padding: 5px; ">
+                        <div class="alert alert-danger alert-b2b" role="alert">
+                            No momento a venda deste produto não esta liberada. Verifique com a empresa.  Estoque indisponível no momento.                 
+                        </div>
+                        <div class="prev-fat-carrinho" style="font-size: 8pt; margin-top: 7px; margin-bottom: 7px;">
+                            <span class="infoItemCart"><b>Agrupamento:</b> 12</span>
+                            <span class="infoItemCart"><b>Total Disponível</b>: Pronta: 0 caixas / Em Produção: 0</span>
+                            <span class="infoItemCart"><b>Previsão de vendas: </b>SEMANA DE 11/01/2021 A 15/01/2021 - 11/01/2021 a 15/01/2021</span>
+                        </div>
+                    </div>
+                    <div id="critica_476132000___5">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-2 col-lg-2 text-center hidden-xs display-768">
+                    <label><a title="Editar" onclick="abreGradePopUp(5);" class="btn btn-sm btn-info link-edit-item" style="color:#FFF !important; margin: 4px;"><i class="fa fa-edit"></i></a></label>
+                    <label><a title="Excluir" onclick="abreGradePopUp(5);" class="btn btn-sm btn-danger link-edit-item" style="color:#FFF !important; margin: 4px;"><i class="fa fa-trash"></i></a></label>
+                </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<div class="titulo">Lavanderia Pluma</div>
+<div class="titulo">23/02/2020</div>
+<div class="mb-pc">
+    <div class="pos-relative">
+       Total: 200 pç
+    </div>
+</div>
+<div class="flex">
+   <div class="flex-itens" *ngFor="let item of rel">
+        <table>
+            <tr>
+                <td>{{item.mapa}}</td>
+            </tr>
+            <tr>
+                <td class="linha">{{item.ref}}</td>
+            </tr>
+            <tr style="text-align: center;">
+                <td>{{item.quantidade}}</td>
+            </tr>
+        </table>
+    </div>

@@ -1,0 +1,35 @@
+.titulo{
+    font-size: 20pt;
+    margin-bottom: 60px;
+    text-align: center;
+    }
+    .row{
+       margin-left: 15px;
+       margin-right: 15px;
+    }
+    .ordens{
+        display: inline-block;
+        background-color: aqua;
+    }
+    .linha{
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    .flex-itens{
+        margin: 30px;
+        margin-bottom: 34px;
+        margin-top: 0;
+        font-size: 34px;
+    }
+    .pos-relative{
+        text-align: end;
+        margin-right: 15px;
+    }
+    .mb-pc{
+        margin-bottom: 10px;
+    }

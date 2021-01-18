@@ -1,0 +1,81 @@
+<div class="container">
+    <mat-card>
+        <mat-card-title>Consultar tecido</mat-card-title>
+        <div class="row">
+            <!-- <app-grade></app-grade> -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="cod">Cod:</label>
+                    <input type="text" id="cod" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="tipoRoupa">Nome:</label>
+                    <input type="text" id="tipoRoupa" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row flex-button">           
+            <div class="form-group pr">               
+                <button type="submit" class="btn btn-warning"><i class="fa fa-search"></i>&nbsp; Pesquisar</button>
+            </div>
+            <div class="form-group">               
+                <button type="submit" class="btn btn-success"><i class="fa fa-plus-circle fa-lg "></i>&nbsp; Novo</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <ngx-datatable
+                class="material striped"
+                [rows]="rows"
+                [columnMode]="'force'"
+                [headerHeight]="50"
+                [footerHeight]="50"
+                rowHeight="auto"
+                [externalPaging]="true"
+                [count]=""
+                [offset]=""
+                [limit]="10"
+                [selectionType]="'single'"
+                [messages]="messages">
+
+                <ngx-datatable-column prop="id" name="Código">
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                      {{value}}
+                    </ng-template>
+                  </ngx-datatable-column>
+          
+                  <ngx-datatable-column prop="nome" name="Nome">
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                      {{value}}
+                    </ng-template>
+                  </ngx-datatable-column>
+
+                  <ngx-datatable-column prop="nome" name="Composição">
+                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+                      {{value}}
+                    </ng-template>
+                  </ngx-datatable-column>
+
+                </ngx-datatable>
+            </div>
+        </div>
+    </mat-card>
+</div>
+<!-- <ngx-datatable
+[messages]="messages"
+class="material striped"
+[rows]="dataTable.dados"
+[columnMode]="'force'"
+[headerHeight]="50"
+[footerHeight]="50"
+[rowHeight]="'auto'"
+[externalPaging]="true"
+[count]="dataTable.totalResultados"
+[offset]="dataTable.numeroPagina"
+[limit]="dataTable.tamanhoPagina"
+[selectionType]="'single'"
+(select)='onSelect($event)'
+(page)='setPage($event)'> -->
