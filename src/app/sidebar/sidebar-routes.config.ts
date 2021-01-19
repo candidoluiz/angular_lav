@@ -33,6 +33,7 @@ export const ROUTES = [
     // { path: 'table', title: 'Table List', icon: 'content_paste', children: null },
     // { path: 'notification', title: 'Notification', icon: 'notifications', children: null },
     // { path: 'alert', title: 'Sweet Alert', icon: 'warning', children: null },
+    { path: 'teste', title: 'Teste', icon: 'article', children: null },
     { path: 'tipos_roupa/tipo-roupa-detalhe', title: 'Tipo de Roupa', icon: 'article', children: null },
     { path: 'tecidos/tecido-detalhe', title: 'Tecido', icon: 'article', children: null },
     { path: 'roupas/roupa-detalhe', title: 'Roupa', icon: 'article', children: null },

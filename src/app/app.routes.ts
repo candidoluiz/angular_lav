@@ -1,4 +1,6 @@
-import { RoupaComponent } from './dashboard/roupas/roupa/roupa.component';
+import { TesteDetalheComponent } from './dashboard/teste/teste-detalhe/teste-detalhe.component';
+import { TesteFormComponent } from './dashboard/teste/teste-form/teste-form.component';
+import { TesteComponent } from './dashboard/teste/teste.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
@@ -29,10 +31,10 @@ const routes: Routes = [
     {path: 'tipos_roupa/tipo-roupa-detalhe', component: TipoRoupaDetalheComponent},
     {path: 'tecidos/tecido-detalhe', component: TecidoDetalheComponent},
     {path: 'roupas/roupa-detalhe', component: RoupaDetalheComponent},
-    {path: 'roupas/roupa', component: RoupaComponent},
     // {path: 'notification', component: NotificationComponent},
     // {path: 'alert', component: SweetAlertComponent},
     {path: 'settings', component: SettingsComponent},
+    {path: 'teste', component: TesteComponent,}
     //{path: 'grade', component: GradeComponent},
     // {path: 'components/price-table', component: PriceTableComponent},
     // {path: 'components/panels', component: PanelsComponent},

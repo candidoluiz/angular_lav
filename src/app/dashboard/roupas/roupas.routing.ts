@@ -4,9 +4,12 @@ import { RoupaComponent } from './roupa/roupa.component';
 
 const routes: Routes = [    
     // {path: 'roupas/roupa', component: RoupaComponent},
-    {path: 'editar/:id', component: RoupaComponent},
-    {path: 'roupas', component: RoupaComponent},
+    // {path: 'editar/:id', component: RoupaComponent},
+    //{path: 'dashboard', component: RootComponent, children:[
+        {path: 'roupas/roupa', component: RoupaComponent},
+   // ]},
     // {path: 'dashboard/roupas/roupa-detalhe', component: RoupaComponent},
+    
 ];
 
 @NgModule({

@@ -40,7 +40,7 @@ export class RoupaDetalheComponent implements OnInit {
     console.log(row);
   }
   novo(){
-      this.router.navigate(['roupas/roupa'])
+      this.router.navigate(['roupa'])
   }
 
 }

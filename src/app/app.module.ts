@@ -1,3 +1,4 @@
+import { TesteModule } from './dashboard/teste/teste.module';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -39,13 +40,9 @@ import { TipoRoupaDetalheComponent } from './dashboard/tipos_roupa/tipo-roupa-de
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { TecidoComponent } from './dashboard/tecidos/tecido/tecido.component';
 import { TecidoDetalheComponent } from './dashboard/tecidos/tecido-detalhe/tecido-detalhe.component';
-import { RoupaComponent } from './dashboard/roupas/roupa/roupa.component';
-import { RoupaDetalheComponent } from './dashboard/roupas/roupa-detalhe/roupa-detalhe.component';
 import { GradeComponent } from './shared/grade/grade.component';
 import { RelacaoComponent } from './shared/relacao/relacao.component';
-import { RoupasRoutingModule } from './dashboard/roupas/roupas-routing.module';
-
-
+import { RoupasModule } from './dashboard/roupas/roupas.molule';
 
 @NgModule({
   declarations: [
@@ -75,10 +72,10 @@ import { RoupasRoutingModule } from './dashboard/roupas/roupas-routing.module';
     TipoRoupaDetalheComponent,
     TecidoComponent,
     TecidoDetalheComponent,
-    RoupaComponent,
-    RoupaDetalheComponent,
+    // RoupaComponent,
+    // RoupaDetalheComponent,
     GradeComponent,
-    RelacaoComponent,
+    RelacaoComponent
 
    
   ],
@@ -95,7 +92,9 @@ import { RoupasRoutingModule } from './dashboard/roupas/roupas-routing.module';
     MatTableModule,
     MatCardModule,
     NgxDatatableModule,
-    RoupasRoutingModule
+    RoupasModule,
+    TesteModule
+    // RoupasRoutingModule
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent]
