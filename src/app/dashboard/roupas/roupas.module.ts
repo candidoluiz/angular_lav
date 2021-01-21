@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -13,7 +14,8 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
         CommonModule,
         RoupasRoutingModule,
         MatCardModule,
-        NgxDatatableModule
+        NgxDatatableModule,
+        RouterModule
         ],
     exports: [],
     declarations: [

@@ -36,11 +36,11 @@ export class RoupaDetalheComponent implements OnInit {
     console.log(value);
   }
 
-  editar(row) {
-    console.log(row);
+  editar(row) {   
+    this.router.navigate(['/dashboard/roupas/editar',row])
   }
   novo(){
-      this.router.navigate(['roupa'])
+      this.router.navigate(['/dashboard/roupas/novo'])
   }
 
 }

@@ -1,4 +1,4 @@
-import { TesteModule } from './dashboard/teste/teste.module';
+//import { TesteModule } from './dashboard/teste/teste.module';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -35,14 +35,14 @@ import { CatalogoLinkComponent } from './dashboard/catalogo/catalogo-link/catalo
 import { CatalogoNivelComponent } from './dashboard/catalogo/catalogo-nivel/catalogo-nivel.component';
 import { FichaComponent } from './dashboard/fichas/ficha/ficha.component';
 import { FichaDetalheComponent } from './dashboard/fichas/ficha-detalhe/ficha-detalhe.component';
-import { TipoRoupaComponent } from './dashboard/tipos_roupa/tipo-roupa/tipo-roupa.component';
-import { TipoRoupaDetalheComponent } from './dashboard/tipos_roupa/tipo-roupa-detalhe/tipo-roupa-detalhe.component';
+//import { TipoRoupaComponent } from './dashboard/tipos_roupa/tipo-roupa/tipo-roupa.component';
+//import { TipoRoupaDetalheComponent } from './dashboard/tipos_roupa/tipo-roupa-detalhe/tipo-roupa-detalhe.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { TecidoComponent } from './dashboard/tecidos/tecido/tecido.component';
-import { TecidoDetalheComponent } from './dashboard/tecidos/tecido-detalhe/tecido-detalhe.component';
+//import { TecidoComponent } from './dashboard/tecidos/tecido/tecido.component';
+//import { TecidoDetalheComponent } from './dashboard/tecidos/tecido-detalhe/tecido-detalhe.component';
 import { GradeComponent } from './shared/grade/grade.component';
 import { RelacaoComponent } from './shared/relacao/relacao.component';
-import { RoupasModule } from './dashboard/roupas/roupas.molule';
+//import { RoupasModule } from './dashboard/roupas/roupas.molule';
 
 @NgModule({
   declarations: [
@@ -68,10 +68,10 @@ import { RoupasModule } from './dashboard/roupas/roupas.molule';
     CatalogoNivelComponent,
     FichaComponent,
     FichaDetalheComponent,
-    TipoRoupaComponent,
-    TipoRoupaDetalheComponent,
-    TecidoComponent,
-    TecidoDetalheComponent,
+    //TipoRoupaComponent,
+    //TipoRoupaDetalheComponent,
+    //TecidoComponent,
+    //TecidoDetalheComponent,
     // RoupaComponent,
     // RoupaDetalheComponent,
     GradeComponent,
@@ -92,8 +92,8 @@ import { RoupasModule } from './dashboard/roupas/roupas.molule';
     MatTableModule,
     MatCardModule,
     NgxDatatableModule,
-    RoupasModule,
-    TesteModule
+    //RoupasModule,
+    //TesteModule
     // RoupasRoutingModule
   ],
   providers: [SettingsService],

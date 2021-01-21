@@ -6,7 +6,8 @@ import { TesteComponent } from './teste.component';
 
 
 const routes: Routes = [    
-        {path: 'tes', component: TesteDetalheComponent},
+        {path: '', component: TesteDetalheComponent},
+        {path: 'novo', component: TesteFormComponent},
 ];
 
 @NgModule({

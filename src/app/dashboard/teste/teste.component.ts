@@ -12,8 +12,4 @@ export class TesteComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  novo(){
-    this.router.navigate(['/tes'])
-  }
-
 }

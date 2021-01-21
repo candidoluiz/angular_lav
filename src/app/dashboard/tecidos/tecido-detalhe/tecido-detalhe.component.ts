@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tecido-detalhe',
@@ -16,9 +17,17 @@ export class TecidoDetalheComponent implements OnInit {
     reorderable = true;
     messages = {emptyMessage: `<span class="text-info">Sem Resultados</span>`};
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  editar(row) {   
+    this.router.navigate(['/dashboard/tecidos/editar'])
+  }
+
+  novo(){
+    this.router.navigate(['/dashboard/tecidos/novo'])
   }
 
 }

@@ -35,8 +35,8 @@ export const ROUTES = [
     // { path: 'alert', title: 'Sweet Alert', icon: 'warning', children: null },
     { path: 'teste', title: 'Teste', icon: 'article', children: null },
     { path: 'tipos_roupa/tipo-roupa-detalhe', title: 'Tipo de Roupa', icon: 'article', children: null },
-    { path: 'tecidos/tecido-detalhe', title: 'Tecido', icon: 'article', children: null },
-    { path: 'roupas/roupa-detalhe', title: 'Roupa', icon: 'article', children: null },
+    { path: 'tecidos', title: 'Tecido', icon: 'article', children: null },
+    { path: 'roupas', title: 'Roupa', icon: 'article', children: null },
     { path: 'settings', title: 'Settings', icon: 'settings', children: null },
     //{ path: 'grade', title: 'Grades', icon: 'settings', children: null },
 ];

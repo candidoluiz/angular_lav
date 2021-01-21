@@ -13,8 +13,4 @@ export class TesteFormComponent implements OnInit {
     ngOnInit(): void {
     }
   
-    novo(){
-      this.router.navigate(['tes'])
-    }
-
 }
