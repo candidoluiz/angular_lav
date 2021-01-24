@@ -1,1 +1,78 @@
-<p>roupa works!</p>
+<div class="container">
+    <mat-card>
+        <mat-card-title>Cadastrar roupa</mat-card-title>
+        <!-- <app-navbar title="Cadstro de tipo de roupa"></app-navbar> -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="cod">Cod:</label>
+                    <input type="text" id="cod" class="form-control" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="modelo">Modelo:</label>
+                    <input type="text" id="modelo" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="ano">Ano:</label>
+                    <input type="number" id="ano" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="estacao">Estação:</label>
+                    <select id="estacao" class="form-control">
+                        <option></option>
+                        <option>PRIMAVERA</option>
+                        <option>VERÃO</option>
+                        <option>OUTONO</option>
+                        <option>INVERNO</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select id="estacao" class="form-control">
+                        <option></option>
+                        <option>PRIMAVERA</option>
+                        <option>VERÃO</option>
+                        <option>OUTONO</option>
+                        <option>INVERNO</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="tecido">Tecido:</label>
+                    <select id="estacao" class="form-control">
+                        <option></option>
+                        <option>PRIMAVERA</option>
+                        <option>VERÃO</option>
+                        <option>OUTONO</option>
+                        <option>INVERNO</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">               
+                    <button (click)="cancelar()" type="submit" class="btn btn-danger">Cancelar</button>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">               
+                    <button type="submit" class="btn btn-info">Gravar</button>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>

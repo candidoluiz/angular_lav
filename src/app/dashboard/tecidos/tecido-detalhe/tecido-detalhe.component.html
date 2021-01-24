@@ -29,53 +29,33 @@
             <div class="col-md-12">
                 <ngx-datatable
                 class="material striped"
-                [rows]="rows"
+                [rows]="rows" 
                 [columnMode]="'force'"
                 [headerHeight]="50"
                 [footerHeight]="50"
-                rowHeight="auto"
-                [externalPaging]="true"
+                rowHeight="auto"               
                 [count]=""
                 [offset]=""
                 [limit]="10"
-                [selectionType]="'single'"
+                [columns]="columns" 
                 [messages]="messages">
-
-                <ngx-datatable-column prop="id" name="Código">
-                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                      {{value}}
-                    </ng-template>
-                  </ngx-datatable-column>
-          
-                  <ngx-datatable-column prop="nome" name="Nome">
-                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                      {{value}}
-                    </ng-template>
-                  </ngx-datatable-column>
-
-                  <ngx-datatable-column prop="nome" name="Composição">
-                    <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
-                      {{value}}
-                    </ng-template>
-                  </ngx-datatable-column>
-
+                    <ng-container *ngFor='let column of columns' >
+                        <ngx-datatable-column  *ngIf='column.name === "Actions"' name="" prop="id" [sortable]="false">
+                            <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+                                <span>
+                                    <button class="btn btn-danger p-0w" (click)="excluir(value)" data-toggle="tooltip" title="Excluir">
+                                        <i class="fa fa-trash"></i>
+                                    </button>                          
+                                    <button class="btn btn-info p-0w" (click)="editar(value)" data-toggle="tooltip" title="Editar">
+                                        <i class="fa fa-pencil"></i>
+                                    </button>                          
+                                </span>
+                            </ng-template>
+                      </ngx-datatable-column>
+                      <ngx-datatable-column *ngIf='column.name !== "Actions"' name="{{column.name}}" prop="{{column.prop}}"></ngx-datatable-column>
+                    </ng-container>
                 </ngx-datatable>
             </div>
         </div>
     </mat-card>
 </div>
-<!-- <ngx-datatable
-[messages]="messages"
-class="material striped"
-[rows]="dataTable.dados"
-[columnMode]="'force'"
-[headerHeight]="50"
-[footerHeight]="50"
-[rowHeight]="'auto'"
-[externalPaging]="true"
-[count]="dataTable.totalResultados"
-[offset]="dataTable.numeroPagina"
-[limit]="dataTable.tamanhoPagina"
-[selectionType]="'single'"
-(select)='onSelect($event)'
-(page)='setPage($event)'> -->

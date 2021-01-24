@@ -30,6 +30,7 @@ export class RoupaDetalheComponent implements OnInit {
   constructor(private router:Router) { }
 
   ngOnInit(): void {
+      
   }
 
   excluir(value) {

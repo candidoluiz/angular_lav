@@ -7,11 +7,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./tecido-detalhe.component.css']
 })
 export class TecidoDetalheComponent implements OnInit {
-
     rows = [
-        ['as','1'],
-        ['as',2],
-        ['as',3],
+        {id: '1', nome: 'Garcez', composicao:'100% algodão'},
+        {id: '2', nome: 'Mitani', composicao:'98% poliéster'},
+
+    ];
+
+    columns=[
+        {name: 'Actions', prop: 'id'},
+        {name: 'Nome', prop: 'nome'},
+        {name: 'Composição', prop: 'composicao'},
     ];
     loadingIndicator = true;
     reorderable = true;
@@ -28,6 +33,10 @@ export class TecidoDetalheComponent implements OnInit {
 
   novo(){
     this.router.navigate(['/dashboard/tecidos/novo'])
+  }
+
+  excluir(value){
+
   }
 
 }

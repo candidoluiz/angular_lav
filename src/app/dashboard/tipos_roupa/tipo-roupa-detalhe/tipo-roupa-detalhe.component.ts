@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tipo-roupa-detalhe',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoRoupaDetalheComponent implements OnInit {
     rows = [
-        ['as','1'],
-        ['as',2],
-        ['as',3],
+        {id: '1', nome: 'Calça'},
+        {id: '2', nome: 'Bermuda'},
+        {id: '3', nome: 'Saia'},
+        {id: '4', nome: 'Vestido'},
+    ];
+    columns=[
+        {name: 'Actions', prop: 'id'},
+        {name: 'Tipo', prop: 'nome'}
     ];
   loadingIndicator = true;
   reorderable = true;
@@ -17,9 +23,20 @@ export class TipoRoupaDetalheComponent implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  excluir(value) {
+    console.log(value);
+  }
+
+  editar(row) {   
+    this.router.navigate(['/dashboard/tipos-roupa/editar',row])
+  }
+  novo(){
+      this.router.navigate(['/dashboard/tipos-roupa/novo'])
   }
 
 }

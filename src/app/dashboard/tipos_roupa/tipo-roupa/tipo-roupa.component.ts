@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-tipo-roupa',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoRoupaComponent implements OnInit {
 
-  constructor() { }
+    constructor(private location: Location, private route: ActivatedRoute)  { }
 
   ngOnInit(): void {
+  }
+
+  cancelar(){
+    this.location.back();
   }
 
 }

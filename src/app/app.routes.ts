@@ -9,9 +9,6 @@ import { RootComponent } from './dashboard/root/root.component';
 import { LoginComponent } from './page/login/login.component';
 import { LockComponent } from './page/lock/lock.component';
 import { RegisterComponent } from './page/register/register.component';
-import { TipoRoupaDetalheComponent } from './dashboard/tipos_roupa/tipo-roupa-detalhe/tipo-roupa-detalhe.component';
-import { TecidoDetalheComponent } from './dashboard/tecidos/tecido-detalhe/tecido-detalhe.component';
-import {RoupaDetalheComponent} from './dashboard/roupas/roupa-detalhe/roupa-detalhe.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
@@ -22,7 +19,7 @@ const routes: Routes = [
     {path: '', component: HomeComponent},
     {path: 'settings', component: SettingsComponent},
     {path: 'profile', component: ProfileComponent},
-    //{path: 'tipos-roupas', loadChildren: './dashboard/tipos_roupa/tipos_roupa.module#TesteModule'},
+    {path: 'tipos-roupa', loadChildren: './dashboard/tipos_roupa/tipos-roupa.module#TiposRoupaModule'},
     {path: 'tecidos', loadChildren: './dashboard/tecidos/tecidos.module#TecidosModule'},
     {path: 'teste',  loadChildren: './dashboard/teste/teste.module#TesteModule'},
     {path: 'roupas', loadChildren: './dashboard/roupas/roupas.module#RoupasModule'}
