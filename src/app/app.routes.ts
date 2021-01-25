@@ -22,7 +22,9 @@ const routes: Routes = [
     {path: 'tipos-roupa', loadChildren: './dashboard/tipos_roupa/tipos-roupa.module#TiposRoupaModule'},
     {path: 'tecidos', loadChildren: './dashboard/tecidos/tecidos.module#TecidosModule'},
     {path: 'teste',  loadChildren: './dashboard/teste/teste.module#TesteModule'},
-    {path: 'roupas', loadChildren: './dashboard/roupas/roupas.module#RoupasModule'}
+    {path: 'roupas', loadChildren: './dashboard/roupas/roupas.module#RoupasModule'},
+    {path: 'grupos', loadChildren: './dashboard/grupos/grupos.module#GruposModule'},
+    {path: 'lavanderias', loadChildren: './dashboard/lavanderias/lavanderias.module#LavanderiasModule'}
 
   ]}
 

@@ -75,9 +75,7 @@ import { RelacaoComponent } from './shared/relacao/relacao.component';
     // RoupaComponent,
     // RoupaDetalheComponent,
     GradeComponent,
-    RelacaoComponent
-
-   
+    RelacaoComponent,
   ],
   imports: [
     BrowserModule,

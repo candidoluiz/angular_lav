@@ -33,10 +33,21 @@ export const ROUTES = [
     // { path: 'table', title: 'Table List', icon: 'content_paste', children: null },
     // { path: 'notification', title: 'Notification', icon: 'notifications', children: null },
     // { path: 'alert', title: 'Sweet Alert', icon: 'warning', children: null },
-    //{ path: 'teste', title: 'Teste', icon: 'article', children: null },
-    { path: 'tipos-roupa', title: 'Tipo de Roupa', icon: 'article', children: null },
+
+    // { path: '#lavanderias', id:'lavanderias', title: 'Lavanderia', icon: 'article', children: [
+    //     { path: 'lavanderias', title: 'Lavanderias', icon: 'L'},
+    // ] },
+
+    { path: 'lavanderias', title: 'Lavanderias', icon: 'article',  children: null},
+
+    { path: '#roupas', id:'roupas', title: 'Roupa', icon: 'article', children: [
+        { path: 'roupas', title: 'Roupa', icon: 'R' },
+        { path: 'tipos-roupa', title: 'Tipo de Roupa', icon: 'TR' },
+        { path: 'grupos', title: 'Grupo de Roupa', icon: 'GR' },
+    ] },
+
+    
     { path: 'tecidos', title: 'Tecido', icon: 'article', children: null },
-    { path: 'roupas', title: 'Roupa', icon: 'article', children: null },
     { path: 'settings', title: 'Settings', icon: 'settings', children: null },
     //{ path: 'grade', title: 'Grades', icon: 'settings', children: null },
 ];

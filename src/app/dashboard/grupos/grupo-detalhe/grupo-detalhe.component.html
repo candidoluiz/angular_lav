@@ -1,0 +1,61 @@
+<div class="container">
+    <mat-card>
+        <mat-card-title>Consultar grupo de roupa</mat-card-title>
+        <div class="row">
+            <!-- <app-grade></app-grade> -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="cod">Cod:</label>
+                    <input type="text" id="cod" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="form-group">
+                    <label for="tipoRoupa">Nome:</label>
+                    <input type="text" id="tipoRoupa" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="row flex-button">           
+            <div class="form-group pr">               
+                <button type="submit" class="btn btn-warning"><i class="fa fa-search"></i>&nbsp; Pesquisar</button>
+            </div>
+            <div class="form-group">               
+                <button (click)="novo()"class="btn btn-success"><i class="fa fa-plus-circle fa-lg "></i>&nbsp; Novo</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <ngx-datatable
+                class="material striped"
+                [rows]="rows" 
+                [columnMode]="'force'"
+                [headerHeight]="50"
+                [footerHeight]="50"
+                rowHeight="auto"               
+                [count]=""
+                [offset]=""
+                [limit]="10"
+                [columns]="columns" 
+                [messages]="messages">
+                    <ng-container *ngFor='let column of columns' >
+                        <ngx-datatable-column  *ngIf='column.name === "Actions"' name="" prop="id" [sortable]="false">
+                            <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+                                <span>
+                                    <button class="btn btn-danger p-0w" (click)="excluir(value)" data-toggle="tooltip" title="Excluir">
+                                        <i class="fa fa-trash"></i>
+                                    </button>                          
+                                    <button class="btn btn-info p-0w" (click)="editar(value)" data-toggle="tooltip" title="Editar">
+                                        <i class="fa fa-pencil"></i>
+                                    </button>                          
+                                </span>
+                            </ng-template>
+                      </ngx-datatable-column>
+                      <ngx-datatable-column *ngIf='column.name !== "Actions"' name="{{column.name}}" prop="{{column.prop}}"></ngx-datatable-column>
+                    </ng-container>
+                </ngx-datatable>
+            </div>
+        </div>
+    </mat-card>
+</div>

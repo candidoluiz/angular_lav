@@ -11,8 +11,8 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
     imports: [
-        CommonModule,
         RoupasRoutingModule,
+        CommonModule,
         MatCardModule,
         NgxDatatableModule,
         RouterModule
