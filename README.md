@@ -2,6 +2,8 @@
 
 Material-design Dashboard
 
+ng config schematics.@schematics/angular.component.spec false
+
 ## How to run it
 
 **- please ensure you have installed angular cli, otherwise `npm install -g @angular/cli`**

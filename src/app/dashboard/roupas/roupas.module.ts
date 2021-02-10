@@ -6,11 +6,14 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
     imports: [
+        ReactiveFormsModule,
+        FormsModule,
         RoupasRoutingModule,
         CommonModule,
         MatCardModule,

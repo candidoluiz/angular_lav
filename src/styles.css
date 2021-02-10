@@ -539,3 +539,9 @@ b{
 .ngx-datatable.material .datatable-header .datatable-header-cell{
     color: black;
 }
+.alinharFim{
+    text-align: end !important;
+}
+.alinharCentro{
+    text-align: center !important;
+}

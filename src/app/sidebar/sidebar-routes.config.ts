@@ -1,53 +1,26 @@
 export const ROUTES = [
-    { path: '/dashboard', title: 'Dashboard', icon: 'dashboard', children: null },
+    { path: '/dashboard', title: 'Dashboard', icon: 'fas fa-border-all fa-lg', children: null },
 
-    { path: '#catalogo', id: 'catalogo', title: 'Ficha', icon: 'menu_book', children: [
+    { path: '#catalogo', id: 'catalogo', title: 'Ficha', icon: 'fas fa-clipboard fa-lg', children: [
       {path: 'catalogo/catalogo-link', title: 'Catálogo Link', icon: 'CL'},
       {path: 'catalogo/catalogo-nivel', title: 'Catálogo Nível', icon: 'CN'},
     ]},
 
-    // { path: '#tipos_roupa', id: 'tipos_roupa', title: 'Tipo de Roupa', icon: 'menu_book', children: [    
-    //   {path: 'tipos_roupa/tipo-roupa-detalhe', title: 'Consultar tipo de roupa', icon: 'CN'},
-    // ]},
+    { path: '#lavanderias', id: 'lavanderias', title: 'Lavanderias', icon: 'fad fa-industry-alt fa-lg',  children: [
+        { path: 'lavanderias', title: 'Lavanderias', icon: 'L' },
+        { path: 'lavagens', title: 'Processos de lavagem', icon: 'PL'},
+    ]},
 
-    // { path: '#tecidos', id: 'tecidos', title: 'Tecido', icon: 'point_of_sale', children: [
-    //   {path: 'tecidos/tecido-detalhe', title: 'Consultar Tecido', icon: 'VD'}
-    // ]},
+   
 
-    // { path: '#roupas', id: 'roupas', title: 'Roupa', icon: 'point_of_sale', children: [
-    //   {path: 'roupas/roupa-detalhe', title: 'Consultar Roupa', icon: 'VD'}
-    // ]},
-
-
-    // { path: 'clientes', title: 'Tecido', icon: 'people_alt', children: null },
-    // { path: 'outros', title: 'Lavanderia', icon: 'more', children: null },
-    // { path: 'outros', title: 'Lavagens', icon: 'more', children: null },
-    // { path: 'outros', title: 'Cidade', icon: 'more', children: null },
-    // { path: 'utilitarios', title: 'Empresa', icon: 'apps', children: null },
-
-    // { path: '#component', id: 'component', title: 'Componentes', icon: 'apps', children: [
-    //   {path: 'components/price-table', title: 'Price Table', icon: 'PT'},
-    //   {path: 'components/panels', title: 'Panels', icon: 'P'},
-    //   {path: 'components/wizard', title: 'Wizard', icon: 'W'},
-    // ]},
-    // { path: 'table', title: 'Table List', icon: 'content_paste', children: null },
-    // { path: 'notification', title: 'Notification', icon: 'notifications', children: null },
-    // { path: 'alert', title: 'Sweet Alert', icon: 'warning', children: null },
-
-    // { path: '#lavanderias', id:'lavanderias', title: 'Lavanderia', icon: 'article', children: [
-    //     { path: 'lavanderias', title: 'Lavanderias', icon: 'L'},
-    // ] },
-
-    { path: 'lavanderias', title: 'Lavanderias', icon: 'article',  children: null},
-
-    { path: '#roupas', id:'roupas', title: 'Roupa', icon: 'article', children: [
+    { path: '#roupas', id:'roupas', title: 'Roupa', icon: 'fas fa-tshirt fa-lg', children: [
         { path: 'roupas', title: 'Roupa', icon: 'R' },
         { path: 'tipos-roupa', title: 'Tipo de Roupa', icon: 'TR' },
         { path: 'grupos', title: 'Grupo de Roupa', icon: 'GR' },
     ] },
 
     
-    { path: 'tecidos', title: 'Tecido', icon: 'article', children: null },
-    { path: 'settings', title: 'Settings', icon: 'settings', children: null },
-    //{ path: 'grade', title: 'Grades', icon: 'settings', children: null },
+    { path: 'tecidos', title: 'Tecido', icon: 'fas fa-scarf fa-lg', children: null },
+    { path: 'settings', title: 'Settings', icon: 'fas fa-cogs  fa-lg', children: null },
+    //{ path: 'grade', title: 'Grades', icon: '<i class="fas fa-clipboard"></i>', children: null },
 ];

@@ -1,39 +1,41 @@
-<div class="container">
-    <mat-card>
-        <mat-card-title>Cadastrar tecido</mat-card-title>        
-        <div class="row">
-            <div class="col-md-3">
-                <div class="form-group">
-                    <label for="cod">Cod:</label>
-                    <input type="text" id="cod" class="form-control" disabled>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <mat-card>
+            <mat-card-title>Cadastrar tecido</mat-card-title>        
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="cod">Cod:</label>
+                        <input type="text" id="cod" class="form-control" disabled formControlName="id">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="modelo">Nome:</label>
-                    <input type="text" id="nome" class="form-control">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="modelo">Nome:</label>
+                        <input type="text" id="nome" class="form-control" formControlName="nome">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="ano">Composição:</label>
+                        <input type="text" id="composicao" class="form-control" formControlName="composicao">
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="ano">Composição:</label>
-                    <input type="text" id="composicao" class="form-control">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">               
+                        <button type="button" (click)="cancelar()" class="btn btn-danger">Cancelar</button>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">               
+                        <button type="submit" class="btn btn-info">Gravar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <div class="form-group">               
-                    <button (click)="cancelar()" type="submit" class="btn btn-danger">Cancelar</button>
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="form-group">               
-                    <button type="submit" class="btn btn-info">Gravar</button>
-                </div>
-            </div>
-        </div>
-    </mat-card>
-</div>
+        </mat-card>
+    </div>
+</form>
