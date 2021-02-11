@@ -1,0 +1,1 @@
+export const LAVANDERIA_API='http://localhost:3000/';

@@ -1,3 +1,4 @@
+import { RoupasService } from './dashboard/roupas/roupas.service';
 //import { TesteModule } from './dashboard/teste/teste.module';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserModule } from '@angular/platform-browser';
@@ -35,6 +36,7 @@ import { FichaComponent } from './dashboard/fichas/ficha/ficha.component';
 import { FichaDetalheComponent } from './dashboard/fichas/ficha-detalhe/ficha-detalhe.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RelacaoComponent } from './shared/relacao/relacao.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -74,6 +76,7 @@ import { RelacaoComponent } from './shared/relacao/relacao.component';
     MatTableModule,
     MatCardModule,
     NgxDatatableModule,
+    HttpClientModule,
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent]

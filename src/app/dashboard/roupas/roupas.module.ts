@@ -7,6 +7,7 @@ import { MatCardModule } from '@angular/material/card';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RoupasService } from './roupas.service';
 
 
 
@@ -24,6 +25,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     declarations: [
         RoupaDetalheComponent,
         RoupaComponent],
-    providers: [],
+    providers: [RoupasService],
 })
 export class RoupasModule { }

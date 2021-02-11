@@ -1,0 +1,52 @@
+{
+    "roupas": [
+        {
+            "id": 1, 
+            "modelo": "200R", 
+            "tipo":"Calça",
+            "tecido":"Garcez",
+            "ano":2000,
+            "estacao":"Primavera"
+        },
+        {
+            "id": 2, 
+            "modelo": "201R", 
+            "tipo":"Flare",
+            "tecido":"Oregon Black",
+            "ano":2000,
+            "estacao":"Primavera"
+        },
+        {
+            "id": 2, 
+            "modelo": "201R", 
+            "tipo":"Flare",
+            "tecido":"Oregon Black",
+            "ano":2000,
+            "estacao":"Primavera"
+        },
+        {
+            "id": 2, 
+            "modelo": "201R", 
+            "tipo":"Flare",
+            "tecido":"Oregon Black",
+            "ano":2000,
+            "estacao":"Primavera"
+        },
+        {
+            "id": 2, 
+            "modelo": "201R", 
+            "tipo":"Flare",
+            "tecido":"Oregon Black",
+            "ano":2000,
+            "estacao":"Primavera"
+        },
+        {
+            "id": 2, 
+            "modelo": "201R", 
+            "tipo":"Flare",
+            "tecido":"Oregon Black",
+            "ano":2000,
+            "estacao":"Primavera"
+        }
+    ]
+}

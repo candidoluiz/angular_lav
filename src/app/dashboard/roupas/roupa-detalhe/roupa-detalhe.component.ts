@@ -1,3 +1,6 @@
+import { Datatable } from './../../../shared/models/dataTable.model';
+import { Roupa } from './../roupa.model';
+import { RoupasService } from './../roupas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -9,21 +12,8 @@ import { Router } from '@angular/router';
 export class RoupaDetalheComponent implements OnInit {
     reorderable: boolean = false;
     minha = 'luiz';
+    rows  = new Datatable();
 
-    rows = [
-        {id: '1', modelo: '200R', tipo:'Calça',tecido:'Garcez',ano:'2000',estacao:'Primavera'},
-        {id: '2', modelo: '201R', tipo:'Flare',tecido:'Oregon Black',ano:'2000',estacao:'Primavera'},
-        {id: '3', modelo: '202R', tipo:'Capri',tecido:'Mitanni',ano:'2000',estacao:'Primavera'},
-        {id: '4', modelo: '203R', tipo:'Cigarrete',tecido:'Garcez',ano:'2000',estacao:'Primavera'},
-        {id: '5', modelo: '200R', tipo:'Calça',tecido:'Garcez',ano:'2000',estacao:'Primavera'},
-        {id: '6', modelo: '201R', tipo:'Flare',tecido:'Oregon Black',ano:'2000',estacao:'Primavera'},
-        {id: '7', modelo: '202R', tipo:'Capri',tecido:'Mitanni',ano:'2000',estacao:'Primavera'},
-        {id: '8', modelo: '203R', tipo:'Cigarrete',tecido:'Garcez',ano:'2000',estacao:'Primavera'},
-        {id: '9', modelo: '200R', tipo:'Calça',tecido:'Garcez',ano:'2000',estacao:'Primavera'},
-        {id: '10', modelo: '201R', tipo:'Flare',tecido:'Oregon Black',ano:'2000',estacao:'Primavera'},
-        {id: '11', modelo: '202R', tipo:'Capri',tecido:'Mitanni',ano:'2000',estacao:'Primavera'},
-        {id: '12', modelo: '203R', tipo:'Cigarrete',tecido:'Garcez',ano:'2000',estacao:'Primavera'},
-    ];
     columns=[
         {name: 'Modelo', prop: 'modelo'},
         {name: 'Tipo', prop: 'tipo'},
@@ -36,21 +26,26 @@ export class RoupaDetalheComponent implements OnInit {
 
     messages = {emptyMessage: `<span class="text-info">Sem Resultados</span>`};
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private roupaService: RoupasService) { }
 
   ngOnInit(): void {
-      
+    this.roupaService.getRoupas().subscribe(data =>{
+        this.rows = data;
+
+    });
   }
 
   excluir(value) {
+      
     console.log(value);
+
   }
 
   editar(row) {   
     this.router.navigate(['/dashboard/roupas/editar',row])
   }
   novo(){
-      this.router.navigate(['/dashboard/roupas/novo'])
+    this.router.navigate(['/dashboard/roupas/novo'])
   }
 
 }
