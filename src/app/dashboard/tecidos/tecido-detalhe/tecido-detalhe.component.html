@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" #cont>
     <mat-card>
         <mat-card-title>Consultar tecido</mat-card-title>
         <div class="row">
@@ -29,7 +29,7 @@
             <div class="col-md-12">
                 <ngx-datatable
                 class="material striped"
-                [rows]="rows" 
+                [rows]="rows.dados" 
                 [columnMode]="'force'"
                 [headerHeight]="50"
                 [footerHeight]="50"
@@ -40,10 +40,10 @@
                 [columns]="columns" 
                 [messages]="messages">
                     <ng-container *ngFor='let column of columns' >
-                        <ngx-datatable-column  *ngIf='column.name === "Actions"' name="" prop="id" [sortable]="false">
+                        <ngx-datatable-column  *ngIf='column.name === "Actions"' name="" prop="id" [sortable]="false" cellClass="{{column.algn}}">
                             <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
                                 <span>
-                                    <button class="btn btn-danger p-0w" (click)="excluir(value)" data-toggle="tooltip" title="Excluir">
+                                    <button class="btn btn-danger p-0w" (click)="openAlert(value)" data-toggle="tooltip" title="Excluir">
                                         <i class="fa fa-trash"></i>
                                     </button>                          
                                     <button class="btn btn-info p-0w" (click)="editar(value)" data-toggle="tooltip" title="Editar">
@@ -59,3 +59,4 @@
         </div>
     </mat-card>
 </div>
+<ngx-spinner type="timer" size="default"></ngx-spinner>

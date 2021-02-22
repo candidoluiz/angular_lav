@@ -6,10 +6,10 @@ export class ErrorHandler{
         if(error instanceof Response){
             errorMessage= `Erro ${error.status} ao acessar a URL ${error.url} - ${error.statusText}`
         }else{
-            errorMessage = `Erro Codigo: ${error.status}\n Message: ${error.message}`;
+            errorMessage = `Erro Codigo: ${error.status} \n Message: ${error.message}`;
             //console.log(error);
         }
-        console.log(errorMessage);
+        //console.log(errorMessage);
         return throwError(errorMessage);
     }
 }

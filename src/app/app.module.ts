@@ -39,6 +39,7 @@ import { RelacaoComponent } from './shared/relacao/relacao.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

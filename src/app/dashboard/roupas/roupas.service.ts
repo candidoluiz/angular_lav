@@ -14,10 +14,10 @@ export class RoupasService {
 
     constructor(private http: HttpClient) { }
 
-    getRoupas(): Observable<Datatable>{
+    getAll(){
         let params = new HttpParams();
 
-        return this.http.get(this.API)
+        return this.http.get<Datatable>(this.API)
         .pipe(
             map((res: any) => {
                 let data = JSON.parse(JSON.stringify(res));
@@ -25,8 +25,28 @@ export class RoupasService {
                 dataTable.dados = data
                 return dataTable;
               }),
-              catchError(ErrorHandler.handlerError)
+              catchError(ErrorHandler.handlerError),
+              tap(console.log)
         );
+      }
+
+      getById(id: number){
+        return this.http.get<Roupa>(`${this.API}/${id}`)
+        .pipe(
+            catchError(ErrorHandler.handlerError)
+        )
+      }
+
+      save(roupa: Roupa){
+        
+      }
+
+      insert(){
+
+      }
+
+      update(){
+
       }
 
     //   handleError(error) {

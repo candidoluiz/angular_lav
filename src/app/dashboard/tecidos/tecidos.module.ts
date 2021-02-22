@@ -8,6 +8,8 @@ import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TecidosService } from './tecidos.service';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
     imports: [
@@ -18,13 +20,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         NgxDatatableModule,
         RouterModule,
         TecidosRoutingModule,
-        GradeModule
+        GradeModule,
+        NgxSpinnerModule
     ],
     exports: [],
     declarations: [
         TecidoComponent, 
         TecidoDetalheComponent,
     ],
-    providers: [],
+    providers: [TecidosService],
 })
 export class TecidosModule { }

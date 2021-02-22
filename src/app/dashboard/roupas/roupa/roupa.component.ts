@@ -20,6 +20,7 @@ export class RoupaComponent implements OnInit {
 
   ngOnInit(): void {
       console.log(this.route.snapshot.params.id)
+      
       this.formulario = this.formBuilder.group({
         id: [null],
         modelo: [null],

@@ -48,5 +48,64 @@
             "ano":2000,
             "estacao":"Primavera"
         }
+    ],
+    "tecidos":[
+        {
+            "id": 1,
+            "nome": "Gacez",
+            "composicao": "100% algodão"
+        },
+        {
+            "id": 2,
+            "nome": "Mitani",
+            "composicao": "100% algodão"
+        },
+        {
+            "id": 3,
+            "nome": "Oregon azul",
+            "composicao": "100% algodão"
+        }
+    ],
+    "grupos":[
+        {
+            "id": 1,
+            "nome": "Calça"
+        },
+  
+        {
+            "id": 2,
+            "nome": "Bermuda"
+        },
+  
+        {
+            "id": 3,
+            "nome": "Vestido"
+        },
+ 
+        {
+            "id": 4,
+            "nome": "Camisa"
+        }
+    ],
+    "tipos":[
+        {
+            "id": 1,
+            "nome": "Calça"
+        },
+  
+        {
+            "id": 2,
+            "nome": "Bermuda"
+        },
+  
+        {
+            "id": 3,
+            "nome": "Vestido"
+        },
+ 
+        {
+            "id": 4,
+            "nome": "Camisa"
+        }
     ]
 }

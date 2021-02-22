@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tecido',
@@ -18,7 +18,7 @@ export class TecidoComponent implements OnInit {
 
   ngOnInit(){
     this.formulario = this.formBuilder.group({
-        id: [null],
+        id: {value: null, disabled: true},
         nome: [null],
         composicao: [null],
     });

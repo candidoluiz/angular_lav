@@ -1,8 +1,8 @@
-import { Datatable } from './../../../shared/models/dataTable.model';
 import { Roupa } from './../roupa.model';
 import { RoupasService } from './../roupas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Datatable } from 'app/shared/models/dataTable.model';
 
 @Component({
   selector: 'app-roupa-detalhe',
@@ -29,7 +29,7 @@ export class RoupaDetalheComponent implements OnInit {
   constructor(private router:Router, private roupaService: RoupasService) { }
 
   ngOnInit(): void {
-    this.roupaService.getRoupas().subscribe(data =>{
+    this.roupaService.getAll().subscribe(data =>{
         this.rows = data;
 
     });
