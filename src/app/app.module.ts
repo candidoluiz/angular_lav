@@ -37,6 +37,7 @@ import { FichaDetalheComponent } from './dashboard/fichas/ficha-detalhe/ficha-de
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RelacaoComponent } from './shared/relacao/relacao.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GradeModule } from './shared/grade/grade.module';
 
 
 
@@ -78,6 +79,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     NgxDatatableModule,
     HttpClientModule,
+    GradeModule
   ],
   providers: [SettingsService],
   bootstrap: [AppComponent]

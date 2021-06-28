@@ -31,7 +31,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, p, a, button, div, label, small {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   /*line-height: 1.5em;*/
   margin: 0;
 }
@@ -537,7 +537,8 @@ b{
 }
 
 .ngx-datatable.material .datatable-header .datatable-header-cell{
-    color: black;
+    color: white;
+    font-size: 12pt;
 }
 .alinharFim{
     text-align: end !important;
@@ -545,3 +546,20 @@ b{
 .alinharCentro{
     text-align: center !important;
 }
+
+ .datatable-header {
+    background-color: rgb(32, 143, 212) !important;
+  }
+  
+  .datatable-header-cell{
+    background-color: rgb(32, 143, 212) !important;
+  }
+  .mt10{
+      margin-top: 10px;
+  }
+  .mt15{
+      margin-top: 15px;
+  }
+  hr{
+    border-top: 1px solid #bbb;
+  }

@@ -14,8 +14,8 @@ export class TipoRoupaDetalheComponent implements OnInit {
         {id: '4', nome: 'Vestido'},
     ];
     columns=[
-        {name: 'Actions', prop: 'id'},
-        {name: 'Tipo', prop: 'nome'}
+        {name: 'Tipo', prop: 'nome'},
+        {name: 'Actions', prop: 'id', algn: 'alinharFim'},
     ];
   loadingIndicator = true;
   reorderable = true;

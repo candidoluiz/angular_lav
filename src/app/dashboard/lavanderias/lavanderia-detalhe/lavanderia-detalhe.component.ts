@@ -15,9 +15,9 @@ export class LavanderiaDetalheComponent implements OnInit {
     ];
 
     columns=[
-        {name: 'Actions', prop: 'id'},
         {name: 'Nome', prop: 'nome'},
         {name: 'Cidade', prop: 'cidade'},
+        {name: 'Actions', prop: 'id', algn: 'alinharFim'},
     ];
     loadingIndicator = true;
     reorderable = true;

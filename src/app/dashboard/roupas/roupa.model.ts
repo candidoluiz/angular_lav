@@ -1,3 +1,4 @@
+import { Lavagem } from './../lavagens/lavagem.model';
 import { TipoRoupa } from './../tipos_roupa/Roupa';
 import { Tecido } from './../tecidos/tecido.model';
 export interface Roupa{
@@ -7,4 +8,5 @@ export interface Roupa{
     tecido: Tecido
     ano: number
     estacao: string
+    lavagem: Lavagem[]
 }

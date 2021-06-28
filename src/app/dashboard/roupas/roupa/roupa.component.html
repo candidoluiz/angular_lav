@@ -63,16 +63,77 @@
                     </div>
                 </div>
             </div>
+            <hr>
             <div class="row">
-                <div class="col-md-2">
-                    <div class="form-group">               
-                        <button type="button" (click)="cancelar()" class="btn btn-danger">Cancelar</button>
-                    </div>
+                <div class="col-md-6">
+                    <h5>Lavagens adicionadas</h5><br>
+                    <ngx-datatable
+                    class="material striped"
+                    [rows]="" 
+                    [columnMode]="'force'"
+                    [headerHeight]="50"
+                    [footerHeight]="50"
+                    rowHeight="auto"               
+                    [count]=""
+                    [offset]=""
+                    [limit]="50"
+                    [columns]="columns" 
+                    [messages]="messages">
+                        <!-- <ng-container *ngFor='let column of columns' >
+                            <ngx-datatable-column  *ngIf='column.name === "Actions"' name="" prop="id" [sortable]="false"  [resizeable]="false" cellClass="{{column.algn}}">
+                                <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+                                    <span>
+                                        <button class="btn btn-danger p-0w" (click)="excluir(value)" data-toggle="tooltip" title="Excluir">
+                                            <i class="fa fa-trash"></i>
+                                        </button>                          
+                                        <button class="btn btn-info p-0w" (click)="editar(value)" data-toggle="tooltip" title="Editar">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>                          
+                                    </span>
+                                </ng-template>
+                          </ngx-datatable-column>
+                          <ngx-datatable-column *ngIf='column.name !== "Actions"' name="{{column.name}}" prop="{{column.prop}}" [sortable]="false"  [resizeable]="false"></ngx-datatable-column>
+                        </ng-container> -->
+                    </ngx-datatable>
                 </div>
-                <div class="col-md-2">
-                    <div class="form-group">               
-                        <button type="submit" class="btn btn-info">Gravar</button>
-                    </div>
+                <div class="col-md-6">
+                    <h5>Lavagens disponíveis</h5><br>
+                    <ngx-datatable
+                    class="material striped"
+                    [rows]="rows.dados" 
+                    [columnMode]="'force'"
+                    [headerHeight]="50"
+                    [footerHeight]="50"
+                    rowHeight="auto"               
+                    [count]=""
+                    [offset]=""
+                    [limit]="50"
+                    [columns]="columns" 
+                    [messages]="messages">
+                        <!-- <ng-container *ngFor='let column of columns' >
+                            <ngx-datatable-column  *ngIf='column.name === "Actions"' name="" prop="id" [sortable]="false"  [resizeable]="false" cellClass="{{column.algn}}">
+                                <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
+                                    <span>
+                                        <button class="btn btn-danger p-0w" (click)="excluir(value)" data-toggle="tooltip" title="Excluir">
+                                            <i class="fa fa-trash"></i>
+                                        </button>                          
+                                        <button class="btn btn-info p-0w" (click)="editar(value)" data-toggle="tooltip" title="Editar">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>                          
+                                    </span>
+                                </ng-template>
+                          </ngx-datatable-column>
+                          <ngx-datatable-column *ngIf='column.name !== "Actions"' name="{{column.name}}" prop="{{column.prop}}" [sortable]="false"  [resizeable]="false"></ngx-datatable-column>
+                        </ng-container> -->
+                    </ngx-datatable>
+                </div>
+            </div>
+            <div class="row flex-button mt15">
+                <div class="form-group pr">             
+                    <button type="button" (click)="cancelar()" class="btn btn-danger">Cancelar</button>
+                </div>
+                <div class="form-group">               
+                    <button type="submit" class="btn btn-info">Gravar</button>
                 </div>
             </div>
         </mat-card>

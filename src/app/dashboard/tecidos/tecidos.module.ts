@@ -1,7 +1,7 @@
 import { GradeModule } from './../../shared/grade/grade.module';
 import { TecidosRoutingModule } from './tecidos.routing';
 import { TecidoDetalheComponent } from './tecido-detalhe/tecido-detalhe.component';
-import { TecidoComponent } from './tecido/tecido.component';
+import { TecidoComponent } from './tecido-form/tecido.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';

@@ -8,7 +8,6 @@ import { TipoRoupaDetalheComponent } from './tipo-roupa-detalhe/tipo-roupa-detal
 import { TiposRoupaRoutingModule } from './tipos-roupas.routing';
 
 
-
 @NgModule({
     imports: [
         CommonModule,

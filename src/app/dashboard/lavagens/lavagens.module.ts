@@ -6,16 +6,20 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
 @NgModule({
     imports: [
         LavagensRoutingModule,
+        ReactiveFormsModule,
         CommonModule,
         MatCardModule,
         NgxDatatableModule,
-        RouterModule
+        RouterModule,
+        NgxSpinnerModule
     ],
     exports: [],
     declarations: [LavagemComponent, LavagemDetalheComponent],

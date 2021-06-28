@@ -15,8 +15,8 @@ export class GrupoDetalheComponent implements OnInit {
     ];
 
     columns=[
-        {name: 'Actions', prop: 'id'},
-        {name: 'Grupo', prop: 'nome'}        
+        {name: 'Grupo', prop: 'nome'},
+        {name: 'Actions', prop: 'id', algn: 'alinharFim'},
     ];
     loadingIndicator = true;
     reorderable = true;

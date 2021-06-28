@@ -27,12 +27,11 @@ export class TecidoDetalheComponent implements OnInit {
             private tecidosService: TecidosService) {}
 
   ngOnInit(): void {
-    this.spinner.show();
     this.lista();
   }
 
   editar(row) {   
-    this.router.navigate(['/dashboard/tecidos/editar'])
+    this.router.navigate(['/dashboard/tecidos/editar', row])
   }
 
   novo(){
@@ -40,7 +39,15 @@ export class TecidoDetalheComponent implements OnInit {
   }
 
   excluir(value){
-    console.log()
+    this.tecidosService.remove(value).subscribe(data=>{
+        swal({
+            title: 'Registro excluído!',
+            type: 'success',
+            //type: 'error',
+            //confirmButtonClass: 'btn btn-info'
+          });
+          this.lista()
+    }, error=>{})
   }
 
   openAlert(value){
@@ -53,18 +60,15 @@ export class TecidoDetalheComponent implements OnInit {
         cancelButtonClass: 'btn btn-danger',
         confirmButtonText: 'SIM',
         cancelButtonText: 'NÃO',
-      }).then(data=> {
-          //console.log(data);
-        swal({
-          title: 'Registro excluído!',
-          type: 'success',
-          //type: 'error',
-          confirmButtonClass: 'btn btn-info'
-        });
-      });
+      }).then(data=> {          
+          if(data){
+            this.excluir(value)
+          }
+      },dismiss=>{});
   }
 
   lista(){
+    this.spinner.show();
     this.tecidosService.getAll().subscribe(data =>{
         this.rows = data;
         this.spinner.hide();

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Datatable } from 'app/shared/models/dataTable.model';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { LavagensService } from '../lavagem.service';
 
 @Component({
   selector: 'app-lavagem-detalhe',
@@ -7,24 +10,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./lavagem-detalhe.component.css']
 })
 export class LavagemDetalheComponent implements OnInit {
+    reorderable: boolean = false;
+    rows  = new Datatable();
 
-    rows = [
-        {id: '1', nome: 'Amaciado'},
-        {id: '2', nome: 'Resina Siliconada'},
+    // rows = [
+    //     {id: '1', nome: 'Amaciado'},
+    //     {id: '2', nome: 'Resina Siliconada'},
 
-    ];
+    // ];
 
     columns=[
-        {name: 'Actions', prop: 'id'},
-        {name: 'Nome', prop: 'nome'}
+        {name: 'Nome', prop: 'nome'},
+        {name: 'Actions', prop: 'id',  algn: 'alinharFim'},
     ];
     loadingIndicator = true;
-    reorderable = true;
     messages = {emptyMessage: `<span class="text-info">Sem Resultados</span>`};
 
-  constructor(private router:Router) { }
+  constructor(
+      private router:Router,
+      private lavagensService: LavagensService, 
+      private spinner: NgxSpinnerService,) { }
 
   ngOnInit(): void {
+    this.lista();
   }
 
   editar(row) {   
@@ -36,6 +44,16 @@ export class LavagemDetalheComponent implements OnInit {
   }
 
   excluir(value){
+
+  }
+  lista(){
+    this.spinner.show();
+    this.lavagensService.getAll().subscribe(data =>{
+        this.rows = data;
+        this.spinner.hide();
+    }, error=>{
+      this.spinner.hide();
+    })
 
   }
 

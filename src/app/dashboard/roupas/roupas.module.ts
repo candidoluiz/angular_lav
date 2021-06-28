@@ -8,6 +8,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RoupasService } from './roupas.service';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -19,7 +20,8 @@ import { RoupasService } from './roupas.service';
         CommonModule,
         MatCardModule,
         NgxDatatableModule,
-        RouterModule
+        RouterModule,
+        NgxSpinnerModule
         ],
     exports: [],
     declarations: [

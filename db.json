@@ -1,111 +1,169 @@
 {
-    "roupas": [
-        {
-            "id": 1, 
-            "modelo": "200R", 
-            "tipo":"Calça",
-            "tecido":"Garcez",
-            "ano":2000,
-            "estacao":"Primavera"
-        },
-        {
-            "id": 2, 
-            "modelo": "201R", 
-            "tipo":"Flare",
-            "tecido":"Oregon Black",
-            "ano":2000,
-            "estacao":"Primavera"
-        },
-        {
-            "id": 2, 
-            "modelo": "201R", 
-            "tipo":"Flare",
-            "tecido":"Oregon Black",
-            "ano":2000,
-            "estacao":"Primavera"
-        },
-        {
-            "id": 2, 
-            "modelo": "201R", 
-            "tipo":"Flare",
-            "tecido":"Oregon Black",
-            "ano":2000,
-            "estacao":"Primavera"
-        },
-        {
-            "id": 2, 
-            "modelo": "201R", 
-            "tipo":"Flare",
-            "tecido":"Oregon Black",
-            "ano":2000,
-            "estacao":"Primavera"
-        },
-        {
-            "id": 2, 
-            "modelo": "201R", 
-            "tipo":"Flare",
-            "tecido":"Oregon Black",
-            "ano":2000,
-            "estacao":"Primavera"
-        }
-    ],
-    "tecidos":[
-        {
-            "id": 1,
-            "nome": "Gacez",
-            "composicao": "100% algodão"
-        },
-        {
-            "id": 2,
-            "nome": "Mitani",
-            "composicao": "100% algodão"
-        },
-        {
-            "id": 3,
-            "nome": "Oregon azul",
-            "composicao": "100% algodão"
-        }
-    ],
-    "grupos":[
-        {
-            "id": 1,
-            "nome": "Calça"
-        },
-  
-        {
-            "id": 2,
-            "nome": "Bermuda"
-        },
-  
-        {
-            "id": 3,
-            "nome": "Vestido"
-        },
- 
-        {
-            "id": 4,
-            "nome": "Camisa"
-        }
-    ],
-    "tipos":[
-        {
-            "id": 1,
-            "nome": "Calça"
-        },
-  
-        {
-            "id": 2,
-            "nome": "Bermuda"
-        },
-  
-        {
-            "id": 3,
-            "nome": "Vestido"
-        },
- 
-        {
-            "id": 4,
-            "nome": "Camisa"
-        }
-    ]
+  "roupas": [
+    {
+      "id": 1,
+      "modelo": "200R",
+      "tipo": "Calça",
+      "tecido": "Garcez",
+      "ano": 2000,
+      "estacao": "Primavera"
+    },
+    {
+      "id": 2,
+      "modelo": "201R",
+      "tipo": "Flare",
+      "tecido": "Oregon Black",
+      "ano": 2000,
+      "estacao": "Primavera"
+    },
+    {
+      "id": 3,
+      "modelo": "202R",
+      "tipo": "Flare",
+      "tecido": "Oregon Black",
+      "ano": 2000,
+      "estacao": "Primavera"
+    },
+    {
+      "id": 4,
+      "modelo": "203R",
+      "tipo": "Flare",
+      "tecido": "Oregon Black",
+      "ano": 2000,
+      "estacao": "Primavera"
+    },
+    {
+      "id": 5,
+      "modelo": "204R",
+      "tipo": "Flare",
+      "tecido": "Oregon Black",
+      "ano": 2000,
+      "estacao": "Primavera"
+    },
+    {
+      "id": 6,
+      "modelo": "205R",
+      "tipo": "Flare",
+      "tecido": "Oregon Black",
+      "ano": 2000,
+      "estacao": "Primavera"
+    }
+  ],
+  "tecidos": [
+    {
+      "id": 1,
+      "nome": "Gacez",
+      "composicao": "100% algodão"
+    },
+    {
+      "id": 2,
+      "nome": "Mitani",
+      "composicao": "100% algodão"
+    },
+    {
+      "id": 9,
+      "nome": "Oregon Azul",
+      "composicao": "100% algodão"
+    },
+    {
+      "id": 10,
+      "nome": "Oregon Black",
+      "composicao": "100% algodão"
+    },
+    {
+      "id": 11,
+      "nome": "Ribanas",
+      "composicao": "100% algodão"
+    }
+  ],
+  "grupos": [
+    {
+      "id": 1,
+      "nome": "Calça"
+    },
+    {
+      "id": 2,
+      "nome": "Bermuda"
+    },
+    {
+      "id": 3,
+      "nome": "Vestido"
+    },
+    {
+      "id": 4,
+      "nome": "Camisa"
+    }
+  ],
+  "tipos": [
+    {
+      "id": 1,
+      "nome": "Calça"
+    },
+    {
+      "id": 2,
+      "nome": "Bermuda"
+    },
+    {
+      "id": 3,
+      "nome": "Vestido"
+    },
+    {
+      "id": 4,
+      "nome": "Camisa"
+    }
+  ],
+  "lavagens": [
+    {
+      "id": 1,
+      "nome": "Amaciado"
+    },
+    {
+      "id": 2,
+      "nome": "Resina Siliconada"
+    },
+    {
+      "id": 3,
+      "nome": "Puídos"
+    },
+    {
+      "id": 4,
+      "nome": "Clean Oz"
+    }
+  ],
+  "lavanderias": [
+    {
+      "id": 1,
+      "nome": "Pluma"
+    },
+    {
+      "id": 2,
+      "nome": "Turquinho"
+    },
+    {
+      "id": 3,
+      "nome": "New Jeans"
+    }
+  ],
+  "cidades": [
+    {
+      "id": 1,
+      "nome": "Birigui",
+      "uf": "SP"
+    },
+    {
+      "id": 2,
+      "nome": "Cia Norte",
+      "uf": "SP"
+    },
+    {
+      "id": 3,
+      "nome": "Rio Preto",
+      "uf": "SP"
+    },
+    {
+      "id": 3,
+      "nome": "Potirendaba",
+      "uf": "SP"
+    }
+  ]
 }

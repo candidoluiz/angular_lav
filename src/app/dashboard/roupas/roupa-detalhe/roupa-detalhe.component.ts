@@ -3,6 +3,7 @@ import { RoupasService } from './../roupas.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Datatable } from 'app/shared/models/dataTable.model';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-roupa-detalhe',
@@ -26,13 +27,13 @@ export class RoupaDetalheComponent implements OnInit {
 
     messages = {emptyMessage: `<span class="text-info">Sem Resultados</span>`};
 
-  constructor(private router:Router, private roupaService: RoupasService) { }
+  constructor(
+      private router:Router, 
+      private roupaService: RoupasService, 
+      private spinner: NgxSpinnerService, ) { }
 
   ngOnInit(): void {
-    this.roupaService.getAll().subscribe(data =>{
-        this.rows = data;
-
-    });
+    this.lista();
   }
 
   excluir(value) {
@@ -46,6 +47,16 @@ export class RoupaDetalheComponent implements OnInit {
   }
   novo(){
     this.router.navigate(['/dashboard/roupas/novo'])
+  }
+  lista(){
+    this.spinner.show();
+    this.roupaService.getAll().subscribe(data =>{
+        this.rows = data;
+        this.spinner.hide();
+    }, error=>{
+      this.spinner.hide();
+    })
+
   }
 
 }
