@@ -1,34 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Lavagem } from './lavagem.model';
+import { BaseService } from 'app/services/base.service';
 import { Datatable } from 'app/shared/models/dataTable.model';
 import { LAVANDERIA_API } from '../../../../app.lavanderia-api';
-import { tap, catchError, take, delay, map, retry } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { ErrorHandler } from '../../../../error-handler';
-import { Lavagem } from './lavagem.model';
 
 @Injectable({providedIn: 'root'})
-export class LavagensService {
-
-    private   API = `${LAVANDERIA_API}lavagens`;
+export class LavagensService extends BaseService<Lavagem>{
     
-    constructor(private http: HttpClient) { }
+    constructor(http: HttpClient) {
+        super('lavagens', http)
+     }
 
-    getAll(){
-        return this.http.get<Datatable>(this.API)
-        .pipe(
-            //delay(300),
-            map((res: any)=>{
-                let data = JSON.parse(JSON.stringify(res));
-                const dataTable = new Datatable();
-                dataTable.dados = data
-                return dataTable;
-            }),
-                catchError(ErrorHandler.handlerError),
-            //tap(console.log)
-        );
-    }
-    getAllDisponivel(){
-        return this.http.get<Datatable>(this.API)
+     getAllDisponivel(){
+        return this.http.get<Datatable>(this.url)
         .pipe(
             //delay(300),
             map((res: any)=>{
@@ -42,11 +29,5 @@ export class LavagensService {
         );
     }
 
-    getById(id: number){
-        return this.http.get<Lavagem>(`${this.API}/${id}`)
-        .pipe(
-            catchError(ErrorHandler.handlerError)
-        )
-      }
     
 }

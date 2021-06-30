@@ -14,6 +14,7 @@ export class TecidoDetalheComponent implements OnInit {
     rows = new Datatable();
 
     columns=[
+        {name: '#', prop: 'id'},
         {name: 'Nome', prop: 'nome'},
         {name: 'Composição', prop: 'composicao'},
         {name: 'Actions', prop: 'id',  algn: 'alinharFim'},
@@ -23,7 +24,7 @@ export class TecidoDetalheComponent implements OnInit {
     messages = {emptyMessage: `<span class="text-info">Sem Resultados</span>`};
 
   constructor(private router:Router,
-            private spinner: NgxSpinnerService, 
+            private spinner: NgxSpinnerService,
             private tecidosService: TecidosService) {}
 
   ngOnInit(): void {
@@ -75,7 +76,6 @@ export class TecidoDetalheComponent implements OnInit {
     }, error=>{
       this.spinner.hide();
     })
-
   }
 
 }

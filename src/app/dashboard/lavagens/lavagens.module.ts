@@ -1,6 +1,6 @@
 import { LavagensRoutingModule } from './lavagens.routing';
 import { NgModule } from '@angular/core';
-import { LavagemComponent } from './lavagem/lavagem.component';
+import { LavagemComponent } from './lavagem-form/lavagem.component';
 import { LavagemDetalheComponent } from './lavagem-detalhe/lavagem-detalhe.component';
 import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';

@@ -18,18 +18,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-2">
-                    <div class="form-group">               
-                        <button (click)="cancelar()" type="submit" class="btn btn-danger">Cancelar</button>
-                    </div>
+            <div class="row flex-button">
+                <div class="form-group pr">             
+                    <button type="button" (click)="cancelar()" class="btn btn-danger">Cancelar</button>
                 </div>
-                <div class="col-md-2">
-                    <div class="form-group">               
-                        <button type="submit" class="btn btn-info">Gravar</button>
-                    </div>
+                <div class="form-group">               
+                    <button type="submit" class="btn btn-info">Gravar</button>
                 </div>
             </div>
         </mat-card>
     </div>
 </form>
+<ngx-spinner type="timer" size="default"></ngx-spinner>

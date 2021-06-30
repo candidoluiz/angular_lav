@@ -43,7 +43,7 @@
                         <ngx-datatable-column  *ngIf='column.name === "Actions"' name="" prop="id" [sortable]="false" [resizeable]="false" cellClass="{{column.algn}}" [draggable]="false">
                             <ng-template let-value="value" let-row="row" ngx-datatable-cell-template>
                                 <span>
-                                    <button class="btn btn-danger p-0w" (click)="excluir(value)" data-toggle="tooltip" title="Excluir">
+                                    <button class="btn btn-danger p-0w" (click)="openAlert(value)" data-toggle="tooltip" title="Excluir">
                                         <i class="fa fa-trash"></i>
                                     </button>                          
                                     <button class="btn btn-info p-0w" (click)="editar(value)" data-toggle="tooltip" title="Editar">

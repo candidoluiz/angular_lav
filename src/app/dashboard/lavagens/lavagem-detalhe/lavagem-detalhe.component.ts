@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Datatable } from 'app/shared/models/dataTable.model';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { LavagensService } from '../lavagem.service';
+declare const swal: any;
 
 @Component({
   selector: 'app-lavagem-detalhe',
@@ -13,13 +14,8 @@ export class LavagemDetalheComponent implements OnInit {
     reorderable: boolean = false;
     rows  = new Datatable();
 
-    // rows = [
-    //     {id: '1', nome: 'Amaciado'},
-    //     {id: '2', nome: 'Resina Siliconada'},
-
-    // ];
-
     columns=[
+        {name: '#', prop: 'id'},
         {name: 'Nome', prop: 'nome'},
         {name: 'Actions', prop: 'id',  algn: 'alinharFim'},
     ];
@@ -44,7 +40,29 @@ export class LavagemDetalheComponent implements OnInit {
   }
 
   excluir(value){
+    this.lavagensService.remove(value).subscribe(data=>{
+        swal({
+            title: 'Registro excluído!',
+            type: 'success',
+          });
+          this.lista()
+    }, error=>{})
 
+  }
+  openAlert(value){
+    swal({
+        title: 'Deseja excluir esse registro?',        
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonClass: 'btn btn-success',
+        cancelButtonClass: 'btn btn-danger',
+        confirmButtonText: 'SIM',
+        cancelButtonText: 'NÃO',
+      }).then(data=> {          
+          if(data){
+            this.excluir(value)
+          }
+      },dismiss=>{});
   }
   lista(){
     this.spinner.show();

@@ -94,14 +94,10 @@
       "nome": "Camisa"
     }
   ],
-  "tipos": [
+  "tiposRoupa": [
     {
       "id": 1,
       "nome": "Calça"
-    },
-    {
-      "id": 2,
-      "nome": "Bermuda"
     },
     {
       "id": 3,
@@ -110,6 +106,26 @@
     {
       "id": 4,
       "nome": "Camisa"
+    },
+    {
+      "id": 5,
+      "nome": "Flare"
+    },
+    {
+      "id": 6,
+      "nome": "Cigarrete"
+    },
+    {
+      "id": 7,
+      "nome": "Bermuda"
+    },
+    {
+      "id": 8,
+      "nome": "Short"
+    },
+    {
+      "id": 9,
+      "nome": "Macaquinho"
     }
   ],
   "lavagens": [

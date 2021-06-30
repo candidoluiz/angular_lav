@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { RouterModule } from '@angular/router';
-import { TipoRoupaComponent } from './tipo-roupa/tipo-roupa.component';
+import { TipoRoupaComponent } from './tipo-roupa-form/tipo-roupa.component';
 import { TipoRoupaDetalheComponent } from './tipo-roupa-detalhe/tipo-roupa-detalhe.component';
 import { TiposRoupaRoutingModule } from './tipos-roupas.routing';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -14,7 +16,10 @@ import { TiposRoupaRoutingModule } from './tipos-roupas.routing';
         TiposRoupaRoutingModule,
         MatCardModule,
         NgxDatatableModule,
-        RouterModule
+        RouterModule,
+        ReactiveFormsModule,
+        FormsModule,
+        NgxSpinnerModule
     ],
     exports: [],
     declarations: [
@@ -23,3 +28,4 @@ import { TiposRoupaRoutingModule } from './tipos-roupas.routing';
     providers: [],
 })
 export class TiposRoupaModule { }
+

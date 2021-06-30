@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-lavanderia',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LavanderiaComponent implements OnInit {
 
-  constructor() { }
+  constructor( private location: Location, ) { }
 
   ngOnInit(): void {
+  }
+  cancelar(){
+    //this.formulario.reset();
+    this.location.back();
   }
 
 }

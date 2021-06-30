@@ -15,8 +15,8 @@ import { EntidadeBase } from 'app/shared/models/entidade-base.model';
 
 export class BaseService<T extends EntidadeBase> {
 
-   url = LAVANDERIA_API;
-  headers = new HttpHeaders();
+    url = LAVANDERIA_API;
+    headers = new HttpHeaders();
 
   constructor(recurso: string, public http: HttpClient) {
     this.url = this.url  + recurso;

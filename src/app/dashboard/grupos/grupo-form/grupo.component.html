@@ -1,12 +1,12 @@
-<!-- <form [formGroup]="formulario" (ngSubmit)="onSubmit()"> -->
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
     <div class="container">
         <mat-card>
-            <mat-card-title>Cadastrar lavanderia</mat-card-title>        
+            <mat-card-title>Cadastrar grupo de roupa</mat-card-title>        
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="cod">Cod:</label>
-                        <input type="text" id="cod" class="form-control" disabled formControlName="id">
+                        <input type="text" id="cod" class="form-control" value="{{id}}" disabled>
                     </div>
                 </div>
             </div>
@@ -28,5 +28,5 @@
             </div>
         </mat-card>
     </div>
-<!-- </form> -->
-<!-- <ngx-spinner type="timer" size="default"></ngx-spinner> -->
+</form>
+<ngx-spinner type="timer" size="default"></ngx-spinner>

@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { LavagensService } from '../lavagem.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-lavagem',
@@ -16,6 +17,7 @@ export class LavagemComponent implements OnInit {
         private formBuilder: FormBuilder,
         private location: Location, 
         private route: ActivatedRoute,
+        private spinner: NgxSpinnerService, 
         private lavagemService: LavagensService)  { }
 
 
@@ -33,9 +35,18 @@ export class LavagemComponent implements OnInit {
   onSubmit(){
 
     //console.log( JSON.stringify(this.formulario.value));
-    Object.keys(this.formulario.value).forEach(key => {
-        console.log(this.formulario.value[key]); // the value of the current key.
-      });
+    //Object.keys(this.formulario.value).forEach(key => {
+    //    console.log(this.formulario.value[key]);
+    //  });
+    if(this.formulario.valid){
+        this.spinner.show();
+        this.lavagemService.save(this.formulario.value).subscribe(data=>{
+            this.spinner.hide();
+          this.location.back();
+        }, error=>{
+            this.spinner.hide();
+        })
+    }
     
   }
 

@@ -16,6 +16,7 @@ export class RoupaDetalheComponent implements OnInit {
     rows  = new Datatable();
 
     columns=[
+        {name: '#', prop: 'id'},
         {name: 'Modelo', prop: 'modelo'},
         {name: 'Tipo', prop: 'tipo'},
         {name: 'Tecido', prop: 'tecido'},

@@ -4,8 +4,11 @@ import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { GruposRoutingModule } from './grupo.routing';
-import { GrupoComponent } from './grupo/grupo.component';
+import { GrupoComponent } from './grupo-form/grupo.component';
 import { GrupoDetalheComponent } from './grupo-detalhe/grupo-detalhe.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { GruposService } from './grupo-roupa.service';
 
 @NgModule({
     imports: [
@@ -13,10 +16,13 @@ import { GrupoDetalheComponent } from './grupo-detalhe/grupo-detalhe.component';
         CommonModule,
         MatCardModule,
         NgxDatatableModule,
-        RouterModule
+        RouterModule,
+        ReactiveFormsModule,
+        NgxSpinnerModule,
+        FormsModule
     ],
     exports: [],
     declarations: [GrupoComponent, GrupoDetalheComponent],
-    providers: [],
+    providers: [GruposService],
 })
 export class GruposModule { }
