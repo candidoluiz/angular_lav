@@ -1,0 +1,83 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <mat-card>
+            <mat-card-title>Cadastrar lavanderia</mat-card-title>        
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="cod">Cod:</label>
+                        <input type="text" id="cod" class="form-control" value="{{id}}" disabled >
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="modelo">Nome:</label>
+                        <input type="text" class="form-control" formControlName="nome">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="modelo">Cnpj:</label>
+                        <input type="text" class="form-control" formControlName="cnpj">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="modelo">Telefone:</label>
+                        <input type="text" class="form-control" formControlName="telefone">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label for="modelo">Endereço:</label>
+                        <input type="text" class="form-control" formControlName="endereco">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="modelo">Número:</label>
+                        <input type="text" class="form-control" formControlName="numero">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="modelo">UF:</label>
+                          <select id="uf" class="form-control"  formControlName="uf">
+                            <option value="" ></option>
+                            <option *ngFor="let uf of ufs | async" [value]="uf.id"> {{uf.text}} </option>
+                        </select>                       
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <label for="modelo">Cidade:</label>
+                        <input type="text" class="form-control" formControlName="cidade">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="modelo">Cep:</label>
+                        <input type="text" class="form-control" formControlName="cep">
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-button">
+                <div class="form-group pr">             
+                    <button type="button" (click)="cancelar()" class="btn btn-danger">Cancelar</button>
+                </div>
+                <div class="form-group">               
+                    <button type="submit" class="btn btn-info">Gravar</button>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</form>
+<ngx-spinner type="timer" size="default"></ngx-spinner>

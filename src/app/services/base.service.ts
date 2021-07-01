@@ -34,6 +34,7 @@ export class BaseService<T extends EntidadeBase> {
         }),catchError(ErrorHandler.handlerError),
     )      
   }
+
   getById(id: number){
     return this.http.get<T>(`${this.url}/${id}`)
     .pipe(

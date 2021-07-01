@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Datatable } from 'app/shared/models/dataTable.model';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { LavanderiaService } from '../lavanderia.service';
+declare const swal: any;
 
 @Component({
   selector: 'app-lavanderia-detalhe',
@@ -7,25 +11,26 @@ import { Router } from '@angular/router';
   styleUrls: ['./lavanderia-detalhe.component.css']
 })
 export class LavanderiaDetalheComponent implements OnInit {
-
-    rows = [
-        {id: '1', nome: 'Pluma', cidade:'Cia Norte'},
-        {id: '2', nome: 'Turquinho', cidade:'Rio Preto'},
-
-    ];
+    reorderable: boolean = false;
+    rows  = new Datatable();
 
     columns=[
+        {name: '#', prop: 'id'},
         {name: 'Nome', prop: 'nome'},
         {name: 'Cidade', prop: 'cidade'},
+        {name: 'Telefone', prop: 'telefone'},
         {name: 'Actions', prop: 'id', algn: 'alinharFim'},
     ];
     loadingIndicator = true;
-    reorderable = true;
     messages = {emptyMessage: `<span class="text-info">Sem Resultados</span>`};
 
-    constructor(private router:Router) { }
+    constructor(
+        private router:Router,
+        private lavanderiaService: LavanderiaService, 
+        private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
+    this.lista();
   }
 
   editar(row) {   
@@ -37,6 +42,16 @@ export class LavanderiaDetalheComponent implements OnInit {
   }
 
   excluir(value){
+
+  }
+  lista(){
+    this.spinner.show();
+    this.lavanderiaService.getAll().subscribe(data =>{
+        this.rows = data;
+        this.spinner.hide();
+    }, error=>{
+      this.spinner.hide();
+    })
 
   }
 

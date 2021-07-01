@@ -25,7 +25,7 @@ export class LavagemDetalheComponent implements OnInit {
   constructor(
       private router:Router,
       private lavagensService: LavagensService, 
-      private spinner: NgxSpinnerService,) { }
+      private spinner: NgxSpinnerService) { }
 
   ngOnInit(): void {
     this.lista();

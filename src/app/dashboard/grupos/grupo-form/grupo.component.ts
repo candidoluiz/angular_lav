@@ -26,8 +26,8 @@ export class GrupoComponent implements OnInit {
     this.id = grupo.id;
 
     this.formulario = this.formBuilder.group({
-        id: [grupo.id],
-        nome: [grupo.nome,[Validators.required]],
+        id:     [grupo.id],
+        nome:   [grupo.nome,[Validators.required]],
     });
   }
 

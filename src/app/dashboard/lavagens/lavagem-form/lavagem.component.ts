@@ -12,6 +12,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class LavagemComponent implements OnInit {
     formulario: FormGroup;
+    id:string = '';
 
     constructor(
         private formBuilder: FormBuilder,
@@ -23,9 +24,10 @@ export class LavagemComponent implements OnInit {
 
   ngOnInit(): void {
     const lavagem = this.route.snapshot.data['lavagem'];
+    this.id = lavagem.id
     this.formulario = this.formBuilder.group({
-        id: {value: lavagem.id, disabled: true},
-        nome: [lavagem.nome],
+        id:     [lavagem.id],
+        nome:   [lavagem.nome],
     });
   }
 

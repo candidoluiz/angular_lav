@@ -149,15 +149,14 @@
   "lavanderias": [
     {
       "id": 1,
-      "nome": "Pluma"
-    },
-    {
-      "id": 2,
-      "nome": "Turquinho"
-    },
-    {
-      "id": 3,
-      "nome": "New Jeans"
+      "nome": "Pluma",
+      "cnpj": "43.711.742/0001-38",
+      "telefone": "(18)99898-9099",
+      "endereco": "Rua da Alagoas",
+      "numero": "125",
+      "uf": "4",
+      "cidade": "Parana",
+      "cep": "16260-000"
     }
   ],
   "cidades": [
@@ -179,6 +178,24 @@
     {
       "id": 3,
       "nome": "Potirendaba",
+      "uf": "SP"
+    }
+  ],
+  "uf": [
+    {
+      "id": 1,
+      "uf": "AC"
+    },
+    {
+      "id": 2,
+      "uf": "AL"
+    },
+    {
+      "id": 3,
+      "uf": "AP"
+    },
+    {
+      "id": 4,
       "uf": "SP"
     }
   ]
