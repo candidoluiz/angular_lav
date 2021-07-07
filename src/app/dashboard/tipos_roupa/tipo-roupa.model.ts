@@ -1,4 +1,8 @@
 export interface TipoRoupa{
     id: number
-    composicao: string
+    nome: string
+
+    text: string
+
+
 }

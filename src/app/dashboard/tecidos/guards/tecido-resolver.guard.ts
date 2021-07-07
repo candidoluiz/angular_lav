@@ -17,7 +17,8 @@ export class TecidoResolverGuard implements Resolve<Tecido> {
         return of({
             id: null,
             nome: null,
-            composicao: null
+            composicao: null,
+            text: null
         });
     }
 }

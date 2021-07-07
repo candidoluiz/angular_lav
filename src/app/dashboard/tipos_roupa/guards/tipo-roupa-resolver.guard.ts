@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 
 import { Observable, of } from 'rxjs';
-import { TipoRoupa } from '../tipo-roupa';
+import { TipoRoupa } from '../tipo-roupa.model';
 import { TipoRoupaService } from '../tipo-roupa.service';
 
 @Injectable({providedIn: 'root'})
@@ -18,6 +18,7 @@ export class TipoRoupaResolverGuard implements Resolve<TipoRoupa> {
         return of({
             id: null,
             nome: null,
+            text:null
         });
     }
 }

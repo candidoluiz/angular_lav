@@ -7,7 +7,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="cod">Cod:</label>
-                        <input type="text" id="cod" class="form-control" disabled formControlName="id">
+                        <input type="text" id="cod" class="form-control" value="{{id}}" disabled>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                     <div class="form-group">
                         <label for="estacao">Estação:</label>
                         <select id="estacao" class="form-control" formControlName="estacao">
-                            <option ></option>
+                            <option [ngValue]='null' disabled>Selecione uma estração</option>
                             <option value="1">PRIMAVERA</option>
                             <option value="2">VERÃO</option>
                             <option value="3">OUTONO</option>
@@ -42,11 +42,8 @@
                     <div class="form-group">
                         <label for="tipo">Tipo:</label>
                         <select id="tipo" class="form-control"  formControlName="tipo">
-                            <option></option>
-                            <option>PRIMAVERA</option>
-                            <option>VERÃO</option>
-                            <option>OUTONO</option>
-                            <option>INVERNO</option>
+                            <option [ngValue]='null' disabled>Selecione um tipo</option>
+                            <option *ngFor="let tipo of tiposRoupa " [value]="tipo.id"> {{tipo.text}} </option>
                         </select>
                     </div>
                 </div>
@@ -54,11 +51,8 @@
                     <div class="form-group">
                         <label for="tecido">Tecido:</label>
                         <select id="tecido" class="form-control"  formControlName="tecido">
-                            <option></option>
-                            <option>PRIMAVERA</option>
-                            <option>VERÃO</option>
-                            <option>OUTONO</option>
-                            <option>INVERNO</option>
+                            <option [ngValue]='null' disabled>Selecione um tecido</option>
+                            <option *ngFor="let tecido of tecidos " [ngValue]="tecido.id"> {{tecido.text}} </option>
                         </select>
                     </div>
                 </div>
@@ -69,7 +63,7 @@
                     <h5>Lavagens adicionadas</h5><br>
                     <ngx-datatable
                     class="material striped"
-                    [rows]="" 
+                    [rows]="lavagens" 
                     [columnMode]="'force'"
                     [headerHeight]="50"
                     [footerHeight]="50"
@@ -107,8 +101,12 @@
                     rowHeight="auto"               
                     [count]=""
                     [offset]=""
+                    (select)="addLavagem($event)"
+                    (activate)="onActivate($event)"
+                    [selectionType]="'single'"
+                    [selected]="selected"
                     [limit]="50"
-                    [columns]="columns" 
+                    [columns]="columns"
                     [messages]="messages">
                         <!-- <ng-container *ngFor='let column of columns' >
                             <ngx-datatable-column  *ngIf='column.name === "Actions"' name="" prop="id" [sortable]="false"  [resizeable]="false" cellClass="{{column.algn}}">

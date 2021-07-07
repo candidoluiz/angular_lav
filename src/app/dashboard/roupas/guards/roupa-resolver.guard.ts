@@ -20,7 +20,7 @@ export class RoupaResolverGuard implements Resolve<Roupa> {
             modelo: null, 
             tipo: null,
             tecido: null,
-            ano: null,
+            ano: new Date().getFullYear(),
             estacao: null,
             lavagem: []
         });

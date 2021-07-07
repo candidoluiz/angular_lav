@@ -1,8 +1,10 @@
 import { Uf } from './uf.model';
 export interface Cidade {
 
-    id: number;
+    id: number
     nome: number 
-    uf: Uf;
+    uf: Uf
+
+    text: string
   }
   

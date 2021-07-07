@@ -3,8 +3,15 @@
     {
       "id": 1,
       "modelo": "200R",
-      "tipo": "Calça",
-      "tecido": "Garcez",
+      "tipo": {
+        "id": 5,
+        "nome": "Flare"
+      },
+      "tecido": {
+        "id": 1,
+        "nome": "Gacez",
+        "composicao": "100% algodão"
+      },
       "ano": 2000,
       "estacao": "Primavera"
     },
@@ -49,7 +56,7 @@
       "estacao": "Primavera"
     }
   ],
-  "tecidos": [
+  "tecido": [
     {
       "id": 1,
       "nome": "Gacez",
@@ -94,7 +101,7 @@
       "nome": "Camisa"
     }
   ],
-  "tiposRoupa": [
+  "tipoRoupa": [
     {
       "id": 1,
       "nome": "Calça"
@@ -154,31 +161,41 @@
       "telefone": "(18)99898-9099",
       "endereco": "Rua da Alagoas",
       "numero": "125",
-      "uf": "4",
-      "cidade": "Parana",
+      "cidade": {
+        "id": 4,
+        "nome": "Potirendaba",
+        "uf": {
+            "id": 4           
+          }
+      },
       "cep": "16260-000"
     }
   ],
-  "cidades": [
+  "cidade": [
     {
       "id": 1,
       "nome": "Birigui",
-      "uf": "SP"
+      "uf": 4
     },
     {
       "id": 2,
       "nome": "Cia Norte",
-      "uf": "SP"
+      "uf": 4
     },
     {
       "id": 3,
       "nome": "Rio Preto",
-      "uf": "SP"
+      "uf": 4
     },
     {
-      "id": 3,
+      "id": 4,
       "nome": "Potirendaba",
-      "uf": "SP"
+      "uf": 4
+    },
+    {
+      "id": 5,
+      "nome": "Porto Acre",
+      "uf": 1
     }
   ],
   "uf": [

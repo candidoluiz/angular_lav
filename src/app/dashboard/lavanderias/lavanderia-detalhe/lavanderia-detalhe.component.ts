@@ -17,7 +17,7 @@ export class LavanderiaDetalheComponent implements OnInit {
     columns=[
         {name: '#', prop: 'id'},
         {name: 'Nome', prop: 'nome'},
-        {name: 'Cidade', prop: 'cidade'},
+        {name: 'Cidade', prop: 'cidade.nome'},
         {name: 'Telefone', prop: 'telefone'},
         {name: 'Actions', prop: 'id', algn: 'alinharFim'},
     ];
@@ -47,6 +47,7 @@ export class LavanderiaDetalheComponent implements OnInit {
   lista(){
     this.spinner.show();
     this.lavanderiaService.getAll().subscribe(data =>{
+        //console.log(data)
         this.rows = data;
         this.spinner.hide();
     }, error=>{

@@ -1,3 +1,7 @@
+import { Lavagem } from './../../lavagens/lavagem.model';
+import { Tecido } from './../../tecidos/tecido.model';
+import { TecidosService } from './../../tecidos/tecidos.service';
+import { TipoRoupaService } from './../../tipos_roupa/tipo-roupa.service';
 import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
@@ -5,6 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { filter, map } from 'rxjs/operators';
 import { LavagensService } from 'app/dashboard/lavagens/lavagem.service';
 import { Datatable } from 'app/shared/models/dataTable.model';
+import { TipoRoupa } from 'app/dashboard/tipos_roupa/tipo-roupa.model';
 
 
 @Component({
@@ -19,42 +24,45 @@ export class RoupaComponent implements OnInit {
         {name: 'Lavagem', prop: 'nome', sortable: false},
     ];
     rows = new Datatable();
-
-    // rows = [
-    //     {id: '1', nome: 'Amaciado'},
-    //     {id: '2', nome: 'Resina Siliconada'},
-    //     {id: '3', nome: 'Puido'},
-
-    // ];
+    tiposRoupa: TipoRoupa[];
+    tecidos: Tecido[];
+    id:string = '';
+    selected = [];
+    lavagens = []
 
     constructor(
         private formBuilder: FormBuilder,
         private location: Location, 
         private route: ActivatedRoute,
+        private tipoRoupaService: TipoRoupaService,
+        private tecidoService: TecidosService,
         private lavagensService: LavagensService)  { }
 
-  ngOnInit(): void {
-      //console.log(this.route.snapshot.params.id)
-      const roupa = this.route.snapshot.data['roupa'];
-      console.log(roupa);
-      
-      this.formulario = this.formBuilder.group({
-        id: {value: roupa.id, disabled: true},
+  ngOnInit(): void {      
+    this.createForm();
+    this.maiuscula();
+    this.listarLavagemDisponivel();
+    this.getTipoRoupa()
+    this.getTecido();
+  }
+
+  createForm(){
+    const roupa = this.route.snapshot.data['roupa'];
+    this.id = roupa.id
+    this.formulario = this.formBuilder.group({
+        id: [roupa.id],
         modelo: [roupa.modelo],
         ano: [roupa.ano],
         estacao: [roupa.estacao],
-        tipo: [roupa.tipo],
-        tecido: [roupa.tecido]
+        tipo: [roupa?.id],
+        tecido: [roupa.tecido?.id],
+        lavagem: [roupa.lavagem]
     });
-    this.maiuscula();
-    this.listarLavagemDisponivel();
   }
   
 
   cancelar(){
      this.location.back();
-    // this.formulario.reset();
-
   }
 
   onSubmit(){
@@ -70,6 +78,7 @@ export class RoupaComponent implements OnInit {
     //this.spinner.show();
     this.lavagensService.getAllDisponivel().subscribe(data =>{
         this.rows = data;
+        console.log(data)
         //this.spinner.hide();
     }, error=>{
       //this.spinner.hide();
@@ -80,7 +89,28 @@ export class RoupaComponent implements OnInit {
     this.formulario.valueChanges.subscribe(val => {
         this.formulario.value.modelo = this.formulario.value.modelo.toUpperCase();
     })
+  }
+  getTipoRoupa(){
+    this.tipoRoupaService.listarParaSelecionar().subscribe(data => {
+        this.tiposRoupa = data;
+    })
+  }
+  getTecido(){
+    this.tecidoService.listarParaSelecionar().subscribe(data => {
+        this.tecidos = data;
+    })
+  }
+  addLavagem(event){
+    const lav:Lavagem = this.selected[0]
+    let index = this.rows.dados.findIndex(i=>i.id == this.selected[0].id)
+    this.lavagens.push(lav)
+    //console.log(this.rows.dados.findIndex(i=>i.id == this.selected[0].id))
+    this.rows.dados.splice(index,1)
+    this.rows.dados = [...this.rows.dados]
+    this.lavagens =[...this.lavagens]
 
   }
-
+  onActivate(event) {
+    //console.log('Activate Event', event);
+  }
 }

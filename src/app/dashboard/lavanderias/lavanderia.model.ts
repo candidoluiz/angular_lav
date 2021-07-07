@@ -1,3 +1,4 @@
+import { Cidade } from './../../shared/models/cidade.model';
 export interface Lavanderia{
     id: number
     nome: string
@@ -5,7 +6,6 @@ export interface Lavanderia{
     telefone: string
     endereco: string
     numero: string
-    uf: string
-    cidade: string
+    cidade: Cidade
     cep: string
 }

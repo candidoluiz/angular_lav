@@ -14,12 +14,13 @@ export class RoupaDetalheComponent implements OnInit {
     reorderable: boolean = false;
     minha = 'luiz';
     rows  = new Datatable();
+    anoCorrente = new Date().getFullYear();
 
     columns=[
         {name: '#', prop: 'id'},
         {name: 'Modelo', prop: 'modelo'},
-        {name: 'Tipo', prop: 'tipo'},
-        {name: 'Tecido', prop: 'tecido'},
+        {name: 'Tipo', prop: 'tipo.nome'},
+        {name: 'Tecido', prop: 'tecido.nome'},
         {name: 'Ano', prop: 'ano'},
         {name: 'Estação', prop: 'estacao'},
         {name: 'Actions', prop: 'id', algn: 'alinharFim'},
@@ -37,9 +38,7 @@ export class RoupaDetalheComponent implements OnInit {
     this.lista();
   }
 
-  excluir(value) {
-      
-    console.log(value);
+  excluir(value) {    
 
   }
 

@@ -26,7 +26,7 @@ export class RoupasService {
                 return dataTable;
               }),
               catchError(ErrorHandler.handlerError),
-              tap(console.log)
+              //tap(console.log)
         );
       }
 

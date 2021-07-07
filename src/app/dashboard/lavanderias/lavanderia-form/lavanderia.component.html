@@ -47,21 +47,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-2">
-                    <div class="form-group">
-                        <label for="modelo">UF:</label>
-                          <select id="uf" class="form-control"  formControlName="uf">
-                            <option value="" ></option>
-                            <option *ngFor="let uf of ufs | async" [value]="uf.id"> {{uf.text}} </option>
-                        </select>                       
+                <ng-container formGroupName="cidade">
+                    <ng-container formGroupName="uf">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="modelo">UF:</label>
+                                <select id="uf" class="form-control"  formControlName="id">
+                                    <option [ngValue]='null' disabled>Selecione um estado</option>
+                                    <option *ngFor="let uf of ufs " [value]="uf.id"> {{uf.text}} </option>
+                                </select>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="modelo">Cidade:</label>
+                            <select class="form-control" formControlName="id">
+                                <option [ngValue]='null' disabled>Selecione uma cidade</option>
+                                <option *ngFor="let cidade of cidades" [ngValue]="cidade.id"> {{cidade.text}} </option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="form-group">
-                        <label for="modelo">Cidade:</label>
-                        <input type="text" class="form-control" formControlName="cidade">
-                    </div>
-                </div>
+                </ng-container>
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="modelo">Cep:</label>
